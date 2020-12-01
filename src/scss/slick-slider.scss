@@ -1,0 +1,20 @@
+.slider {
+  position: relative;
+  min-width: 0;
+}
+.section-news .slick-slide {
+  max-width: 35.5rem;
+  margin-left: 4rem;
+}
+.slick-slide {
+  outline: none;
+}
+.slick-list {
+  display: flex;
+  justify-content: flex-start;
+}
+.slick-track {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}

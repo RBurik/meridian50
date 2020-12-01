@@ -1,0 +1,14 @@
+@mixin glassCircle($color, $range, $top, $left) {
+  position: absolute;
+  z-index: 0;
+  filter: blur(7.8125rem);
+  width: $range;
+  height: $range;
+  border-radius: $range;
+  background-color: $color;
+  top: $top;
+  left: $left;
+  animation-duration: 15s;
+  animation-name: rotateUpLeft;
+  animation-iteration-count: infinite;
+}
