@@ -1430,7 +1430,7 @@ ul.list-untitled li:before {
           animation-iteration-count: infinite;
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 1441px) {
   html {
     font-size: 0.833333333333333333vw;
   }
