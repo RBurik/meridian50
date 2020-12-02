@@ -69,7 +69,7 @@ h6 {
   padding: 0 16rem;
   width: 100%;
 }
-@keyframes gradientBG {
+@keyframes gradient {
   from {
     background-color: $blue;
   }
@@ -89,6 +89,26 @@ h6 {
     background-color: $blue;
   }
 }
+@keyframes gradientColor {
+  from {
+    color: $blue;
+  }
+  20% {
+    color: $purple;
+  }
+  40% {
+    color: $violet;
+  }
+  60% {
+    color: $pink;
+  }
+  80% {
+    color: $turquoise;
+  }
+  to {
+    color: $blue;
+  }
+}
 .header {
   transition: 0.1s;
   position: fixed;
@@ -99,7 +119,7 @@ h6 {
   padding: 1.5rem 0;
   background-color: $blue;
   animation-duration: 100s;
-  animation-name: gradientBG;
+  animation-name: gradient;
   animation-iteration-count: infinite;
   .container {
     display: flex;
@@ -113,51 +133,36 @@ h6 {
     font-weight: bold;
   }
   .nav-item {
+    padding: 0.3125rem 1.625rem;
     position: relative;
     transition: 0.15s;
     font-size: 1.125rem;
     color: #fff;
-    &:after {
-      content: '';
-      transition: 0.3s;
-      position: absolute;
-      bottom: -0.3125rem;
-      left: 0;
-      display: inline-block;
-      height: 0.125rem;
-      width: 0%;
-      background-color: #fff;
-    }
+    border-radius: 1.0625rem;
     &:hover {
       color: #fff;
-      &:after {
-        width: 100%;
-      }
+      background-color: rgba($color: #fff, $alpha: 0.3);
     }
     &:not(:last-child) {
-      margin-right: 2.25rem;
+      margin-right: 0.625rem;
     }
     &.nav-item-active {
       position: relative;
-      color: #fff;
+      color: $blue;
       font-weight: bold;
-      &:after {
-        content: '';
-        transition: 0.1s;
-        position: absolute;
-        bottom: -0.3125rem;
-        left: 0;
-        display: inline-block;
-        height: 0.125rem;
-        width: 100%;
-        background-color: #fff;
-      }
+      background-color: #fff;
+      animation-duration: 100s;
+      animation-name: gradientColor;
+      animation-iteration-count: infinite;
     }
   }
   &.header-float {
     padding: 0.5rem 0;
-    .nav-item-active:after {
-      opacity: 0;
+    .nav-item {
+      background-color: inherit;
+      &.nav-item-active {
+        color: #fff !important;
+      }
     }
   }
 }
@@ -182,7 +187,7 @@ h6 {
     transform: scale(1);
     padding: 1rem 4rem;
     animation-duration: 100s;
-    animation-name: gradientBG;
+    animation-name: gradient;
     animation-iteration-count: infinite;
     &.button-blue:hover {
       box-shadow: none;

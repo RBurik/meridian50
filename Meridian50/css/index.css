@@ -136,7 +136,7 @@ h6 {
   width: 100%;
 }
 
-@-webkit-keyframes gradientBG {
+@-webkit-keyframes gradient {
   from {
     background-color: #5e58f8;
   }
@@ -162,7 +162,7 @@ h6 {
   }
 }
 
-@keyframes gradientBG {
+@keyframes gradient {
   from {
     background-color: #5e58f8;
   }
@@ -185,6 +185,58 @@ h6 {
 
   to {
     background-color: #5e58f8;
+  }
+}
+
+@-webkit-keyframes gradientColor {
+  from {
+    color: #5e58f8;
+  }
+
+  20% {
+    color: #9856da;
+  }
+
+  40% {
+    color: #c756da;
+  }
+
+  60% {
+    color: #fe98e8;
+  }
+
+  80% {
+    color: #29b8db;
+  }
+
+  to {
+    color: #5e58f8;
+  }
+}
+
+@keyframes gradientColor {
+  from {
+    color: #5e58f8;
+  }
+
+  20% {
+    color: #9856da;
+  }
+
+  40% {
+    color: #c756da;
+  }
+
+  60% {
+    color: #fe98e8;
+  }
+
+  80% {
+    color: #29b8db;
+  }
+
+  to {
+    color: #5e58f8;
   }
 }
 
@@ -201,8 +253,8 @@ h6 {
   background-color: #5e58f8;
   -webkit-animation-duration: 100s;
           animation-duration: 100s;
-  -webkit-animation-name: gradientBG;
-          animation-name: gradientBG;
+  -webkit-animation-name: gradient;
+          animation-name: gradient;
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
 }
@@ -227,66 +279,48 @@ h6 {
 }
 
 .header .nav-item {
+  padding: 0.3125rem 1.625rem;
   position: relative;
   -webkit-transition: 0.15s;
   -o-transition: 0.15s;
   transition: 0.15s;
   font-size: 1.125rem;
   color: #fff;
-}
-
-.header .nav-item:after {
-  content: '';
-  -webkit-transition: 0.3s;
-  -o-transition: 0.3s;
-  transition: 0.3s;
-  position: absolute;
-  bottom: -0.3125rem;
-  left: 0;
-  display: inline-block;
-  height: 0.125rem;
-  width: 0%;
-  background-color: #fff;
+  border-radius: 1.0625rem;
 }
 
 .header .nav-item:hover {
   color: #fff;
-}
-
-.header .nav-item:hover:after {
-  width: 100%;
+  background-color: rgba(255, 255, 255, 0.3);
 }
 
 .header .nav-item:not(:last-child) {
-  margin-right: 2.25rem;
+  margin-right: 0.625rem;
 }
 
 .header .nav-item.nav-item-active {
   position: relative;
-  color: #fff;
+  color: #5e58f8;
   font-weight: bold;
-}
-
-.header .nav-item.nav-item-active:after {
-  content: '';
-  -webkit-transition: 0.1s;
-  -o-transition: 0.1s;
-  transition: 0.1s;
-  position: absolute;
-  bottom: -0.3125rem;
-  left: 0;
-  display: inline-block;
-  height: 0.125rem;
-  width: 100%;
   background-color: #fff;
+  -webkit-animation-duration: 100s;
+          animation-duration: 100s;
+  -webkit-animation-name: gradientColor;
+          animation-name: gradientColor;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
 }
 
 .header.header-float {
   padding: 0.5rem 0;
 }
 
-.header.header-float .nav-item-active:after {
-  opacity: 0;
+.header.header-float .nav-item {
+  background-color: inherit;
+}
+
+.header.header-float .nav-item.nav-item-active {
+  color: #fff !important;
 }
 
 .main {
@@ -319,8 +353,8 @@ h6 {
   padding: 1rem 4rem;
   -webkit-animation-duration: 100s;
           animation-duration: 100s;
-  -webkit-animation-name: gradientBG;
-          animation-name: gradientBG;
+  -webkit-animation-name: gradient;
+          animation-name: gradient;
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
 }
