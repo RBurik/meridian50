@@ -122,10 +122,10 @@ h6 {
   z-index: 100;
   width: 100%;
   padding: 1.5rem 0;
-  background-color: #fff;
-  // animation-duration: 100s;
-  // animation-name: gradient;
-  // animation-iteration-count: infinite;
+  background-color: $blue;
+  animation-duration: 100s;
+  animation-name: gradient;
+  animation-iteration-count: infinite;
   .container {
     display: flex;
     align-items: center;
@@ -133,7 +133,7 @@ h6 {
   }
   .logo-header {
     font-family: $nunito;
-    color: $black;
+    color: #fff;
     font-size: 1.125rem;
     font-weight: bold;
   }
@@ -142,10 +142,10 @@ h6 {
     position: relative;
     transition: 0.15s;
     font-size: 1.125rem;
-    color: $black;
+    color: #fff;
     border-radius: 1.0625rem;
     &:hover {
-      background-color: rgba($color: $black, $alpha: 0.1);
+      background-color: rgba($color: #fff, $alpha: 0.3);
     }
     &:not(:last-child) {
       margin-right: 0.4375rem;
@@ -155,10 +155,10 @@ h6 {
     }
     &.nav-contact {
       color: #fff;
-      background-color: $blue;
-      &:hover {
-        background-color: $blue;
-      }
+      background-color: #fff;
+      animation-duration: 100s;
+      animation-name: gradientColor;
+      animation-iteration-count: infinite;
     }
   }
   &.header-float {
@@ -167,10 +167,7 @@ h6 {
       background-color: inherit;
     }
     .nav-contact {
-      color: $black;
-      &:hover {
-        background-color: inherit;
-      }
+      color: #fff !important;
     }
   }
 }
@@ -661,6 +658,9 @@ ul.list-untitled {
   .address {
     color: #fff;
     font-size: 1rem;
+    li {
+      font-size: #fff;
+    }
     li:not(:last-child) {
       margin-bottom: 1rem;
     }

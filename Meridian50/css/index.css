@@ -256,7 +256,13 @@ h6 {
   z-index: 100;
   width: 100%;
   padding: 1.5rem 0;
-  background-color: #fff;
+  background-color: #5e58f8;
+  -webkit-animation-duration: 100s;
+          animation-duration: 100s;
+  -webkit-animation-name: gradient;
+          animation-name: gradient;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
 }
 
 .header .container {
@@ -273,7 +279,7 @@ h6 {
 
 .header .logo-header {
   font-family: "Nunito", "Lato", sans-serif;
-  color: #011f3b;
+  color: #fff;
   font-size: 1.125rem;
   font-weight: bold;
 }
@@ -285,12 +291,12 @@ h6 {
   -o-transition: 0.15s;
   transition: 0.15s;
   font-size: 1.125rem;
-  color: #011f3b;
+  color: #fff;
   border-radius: 1.0625rem;
 }
 
 .header .nav-item:hover {
-  background-color: rgba(1, 31, 59, 0.1);
+  background-color: rgba(255, 255, 255, 0.3);
 }
 
 .header .nav-item:not(:last-child) {
@@ -303,11 +309,13 @@ h6 {
 
 .header .nav-item.nav-contact {
   color: #fff;
-  background-color: #5e58f8;
-}
-
-.header .nav-item.nav-contact:hover {
-  background-color: #5e58f8;
+  background-color: #fff;
+  -webkit-animation-duration: 100s;
+          animation-duration: 100s;
+  -webkit-animation-name: gradientColor;
+          animation-name: gradientColor;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
 }
 
 .header.header-float {
@@ -319,11 +327,7 @@ h6 {
 }
 
 .header.header-float .nav-contact {
-  color: #011f3b;
-}
-
-.header.header-float .nav-contact:hover {
-  background-color: inherit;
+  color: #fff !important;
 }
 
 .main {
@@ -973,6 +977,11 @@ ul.list-untitled li:before {
 .footer .address {
   color: #fff;
   font-size: 1rem;
+}
+
+.footer .e-address li,
+.footer .address li {
+  font-size: #fff;
 }
 
 .footer .e-address li:not(:last-child),
