@@ -359,6 +359,12 @@ h6 {
           transform: scale(1);
   padding: 1rem 4rem;
   background-color: #5e58f8;
+  -webkit-animation-duration: 100s;
+          animation-duration: 100s;
+  -webkit-animation-name: gradient;
+          animation-name: gradient;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
 }
 
 .main .main-button.button-blue:hover {

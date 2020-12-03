@@ -192,9 +192,9 @@ h6 {
     transform: scale(1);
     padding: 1rem 4rem;
     background-color: $blue;
-    // animation-duration: 100s;
-    // animation-name: gradient;
-    // animation-iteration-count: infinite;
+    animation-duration: 100s;
+    animation-name: gradient;
+    animation-iteration-count: infinite;
     &.button-blue:hover {
       box-shadow: none;
     }
