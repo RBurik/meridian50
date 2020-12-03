@@ -73,8 +73,8 @@
 }
 
 html {
-  font-size: 1vw;
-  font-family: 'Lato', 'Nunito', sans-serif;
+  font-size: 0.833333333333333333vw;
+  font-family: "Lato", "Nunito", sans-serif;
   overflow-x: hidden;
 }
 
@@ -117,6 +117,12 @@ button {
   outline: none;
 }
 
+textarea {
+  font-family: "Lato", "Nunito", sans-serif;
+  border: none;
+  resize: none;
+}
+
 button {
   cursor: pointer;
   font-weight: bold;
@@ -128,7 +134,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Nunito', 'Lato', sans-serif;
+  font-family: "Nunito", "Lato", sans-serif;
 }
 
 .container {
@@ -250,13 +256,7 @@ h6 {
   z-index: 100;
   width: 100%;
   padding: 1.5rem 0;
-  background-color: #5e58f8;
-  -webkit-animation-duration: 100s;
-          animation-duration: 100s;
-  -webkit-animation-name: gradient;
-          animation-name: gradient;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
+  background-color: #fff;
 }
 
 .header .container {
@@ -272,8 +272,8 @@ h6 {
 }
 
 .header .logo-header {
-  font-family: 'Nunito', 'Lato', sans-serif;
-  color: #fff;
+  font-family: "Nunito", "Lato", sans-serif;
+  color: #011f3b;
   font-size: 1.125rem;
   font-weight: bold;
 }
@@ -285,30 +285,29 @@ h6 {
   -o-transition: 0.15s;
   transition: 0.15s;
   font-size: 1.125rem;
-  color: #fff;
+  color: #011f3b;
   border-radius: 1.0625rem;
 }
 
 .header .nav-item:hover {
-  color: #fff;
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: rgba(1, 31, 59, 0.1);
 }
 
 .header .nav-item:not(:last-child) {
-  margin-right: 0.625rem;
+  margin-right: 0.4375rem;
 }
 
 .header .nav-item.nav-item-active {
-  position: relative;
-  color: #5e58f8;
   font-weight: bold;
-  background-color: #fff;
-  -webkit-animation-duration: 100s;
-          animation-duration: 100s;
-  -webkit-animation-name: gradientColor;
-          animation-name: gradientColor;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
+}
+
+.header .nav-item.nav-contact {
+  color: #fff;
+  background-color: #5e58f8;
+}
+
+.header .nav-item.nav-contact:hover {
+  background-color: #5e58f8;
 }
 
 .header.header-float {
@@ -319,8 +318,12 @@ h6 {
   background-color: inherit;
 }
 
-.header.header-float .nav-item.nav-item-active {
-  color: #fff !important;
+.header.header-float .nav-contact {
+  color: #011f3b;
+}
+
+.header.header-float .nav-contact:hover {
+  background-color: inherit;
 }
 
 .main {
@@ -351,12 +354,7 @@ h6 {
       -ms-transform: scale(1);
           transform: scale(1);
   padding: 1rem 4rem;
-  -webkit-animation-duration: 100s;
-          animation-duration: 100s;
-  -webkit-animation-name: gradient;
-          animation-name: gradient;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
+  background-color: #5e58f8;
 }
 
 .main .main-button.button-blue:hover {
@@ -379,15 +377,15 @@ h6 {
 .main .main-illustration {
   position: absolute;
   top: 9.3125rem;
-  right: 5.5rem;
-  width: 36.5625rem;
+  right: 16rem;
+  width: 40rem;
 }
 
 .button-blue {
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;
-  font-family: 'Lato', 'Nunito', sans-serif;
+  font-family: "Lato", "Nunito", sans-serif;
   font-size: 1.5rem;
   color: #fff;
   background-color: #5e58f8;
@@ -404,7 +402,7 @@ h6 {
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;
-  font-family: 'Lato', 'Nunito', sans-serif;
+  font-family: "Lato", "Nunito", sans-serif;
   font-size: 1.5rem;
   color: #fff;
   background-color: #9856da;
@@ -421,7 +419,7 @@ h6 {
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;
-  font-family: 'Lato', 'Nunito', sans-serif;
+  font-family: "Lato", "Nunito", sans-serif;
   font-size: 1.5rem;
   color: #fff;
   background-color: #c756da;
@@ -438,7 +436,7 @@ h6 {
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;
-  font-family: 'Lato', 'Nunito', sans-serif;
+  font-family: "Lato", "Nunito", sans-serif;
   font-size: 1.5rem;
   color: #fff;
   background-color: #fe98e8;
@@ -522,7 +520,7 @@ h6 {
   margin-left: auto;
   font-size: 2rem;
   font-weight: bold;
-  font-family: 'Nunito', 'Lato', sans-serif;
+  font-family: "Nunito", "Lato", sans-serif;
 }
 
 .link-arrow:hover img {
@@ -631,7 +629,7 @@ ul.list-untitled li:before {
 }
 
 .section-confidence .text-cause:before {
-  font-family: 'Nunito', 'Lato', sans-serif;
+  font-family: "Nunito", "Lato", sans-serif;
   font-size: 4rem;
   line-height: 4rem;
   font-weight: 800;
@@ -664,10 +662,10 @@ ul.list-untitled li:before {
 }
 
 .section-confidence .confidence-illustration {
-  width: 26rem;
+  width: 35rem;
   position: absolute;
-  top: 6rem;
-  right: 7rem;
+  top: 3rem;
+  right: 16rem;
 }
 
 .section-news {
@@ -821,177 +819,75 @@ ul.list-untitled li:before {
   padding: 8rem 0 4rem 0;
 }
 
-.section-contact .section-ttile {
-  width: 39.4375rem;
+.section-contact .section-title {
+  width: 40rem;
+  line-height: 132%;
 }
 
 .section-contact .form-wrapper {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
+  -webkit-box-direction: reverse;
+      -ms-flex-flow: row-reverse wrap;
+          flex-flow: row-reverse wrap;
 }
 
-.section-contact .inputs {
+.section-contact .inputs-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-flow: column nowrap;
-          flex-flow: column nowrap;
-  margin-right: 4rem;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  margin-right: 1.5rem;
 }
 
 .section-contact input[type='text'] {
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;
-  width: 21.1875rem;
   border-radius: 0.5rem;
-  padding: 1rem 2rem;
+  padding: 0.5rem 1.5rem;
   color: #8da1b5;
-  font-family: 'Lato', 'Nunito', sans-serif;
+  font-family: "Lato", "Nunito", sans-serif;
   font-size: 1rem;
   border: none;
 }
 
-.section-contact input[type='text']:not(:last-child) {
+.section-contact input[type='text']:not(:nth-child(n + 3)) {
   margin-bottom: 1rem;
 }
 
-.section-contact .service {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-.section-contact .service span {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.section-contact .service span:not(:last-child) {
-  margin-bottom: 1rem;
-}
-
-.section-contact .service input {
-  position: absolute;
-  margin: 0 1rem 0 0;
-  opacity: 0;
-  width: 1.5rem;
-  height: 1.5rem;
-}
-
-.section-contact .service label {
-  padding-left: 2.25rem;
-  position: relative;
+.section-contact .textarea-contact {
   font-size: 1rem;
-  line-height: 103.5%;
-  width: 10.4375rem;
+  color: #8da1b5;
+  padding: 0.5rem 1.5rem;
+  border-radius: 0.625rem;
+  width: 20.8125rem;
+  height: auto;
 }
 
-.section-contact .service label:before {
-  content: '';
-  -webkit-transition: 0.3s;
-  -o-transition: 0.3s;
-  transition: 0.3s;
-  display: block;
-  width: 1rem;
-  height: 1rem;
-  border-radius: 1.25rem;
-  position: absolute;
-  border: 0.125rem solid #8da1b5;
-  left: 0;
-}
-
-.section-contact .service label:after {
-  content: '';
-  -webkit-transition: 0.3s;
-  -o-transition: 0.3s;
-  transition: 0.3s;
-  display: block;
-  width: 0.625rem;
-  height: 0.625rem;
-  border-radius: 0.5rem;
-  position: absolute;
-  left: 0.3125rem;
-  top: 0.3125rem;
-  -webkit-transform: scale(0);
-      -ms-transform: scale(0);
-          transform: scale(0);
-  opacity: 0;
-}
-
-.section-contact .service input:checked + label:after {
-  opacity: 1;
-  -webkit-transform: scale(1);
-      -ms-transform: scale(1);
-          transform: scale(1);
-}
-
-.section-contact .service span:nth-child(2) input:checked + label:before {
-  border-color: #5e58f8;
-}
-
-.section-contact .service span:nth-child(3) input:checked + label:before {
-  border-color: #9856da;
-}
-
-.section-contact .service span:nth-child(4) input:checked + label:before {
-  border-color: #c756da;
-}
-
-.section-contact .service span:last-child input:checked + label:before {
-  -webkit-transition: 0;
-  -o-transition: 0;
-  transition: 0;
-  border-color: #fe98e8;
-}
-
-.section-contact .service span:nth-child(2) input:checked + label:after {
-  background-color: #5e58f8;
-}
-
-.section-contact .service span:nth-child(3) input:checked + label:after {
-  background-color: #9856da;
-}
-
-.section-contact .service span:nth-child(4) input:checked + label:after {
-  background-color: #c756da;
-}
-
-.section-contact .service span:last-child input:checked + label:after {
-  background-color: #fe98e8;
-}
-
-.section-contact .title-form {
-  font-size: 2rem;
-  line-height: 103.5%;
-  margin: 0 0 1rem 0;
+.section-contact input[type='text'],
+.section-contact .button-form {
+  width: 16.3125rem;
 }
 
 .section-contact .button-form {
-  margin-top: 2rem;
+  margin-top: 1.125rem;
   padding: 1rem 4.25rem;
 }
 
 .section-contact .contact-illustration {
-  height: 29.375rem;
+  height: 35rem;
   position: absolute;
-  top: 6.75rem;
-  right: 1.5625rem;
+  top: 3rem;
+  right: 12rem;
 }
 
 .footer {
@@ -1001,15 +897,16 @@ ul.list-untitled li:before {
 .footer .container {
   position: relative;
   padding-top: 2rem;
-  padding-bottom: 6rem;
+  padding-bottom: 4.375rem;
   background-color: #2f3653;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  max-height: 15.25rem;
 }
 
 .footer .container:after {
@@ -1022,15 +919,33 @@ ul.list-untitled li:before {
 }
 
 .footer .logo-footer {
-  font-family: 'Nunito', 'Lato', sans-serif;
+  font-family: "Nunito", "Lato", sans-serif;
   font-size: 1.125rem;
   color: #fff;
-  margin-right: 9.125rem;
-  margin-bottom: 4rem;
+  margin-right: 4rem;
+  margin-bottom: 1rem;
+}
+
+.footer .social-links {
+  margin-right: 4rem;
+}
+
+.footer .social-links a:not(:last-child) {
+  margin-right: 0.5rem;
+}
+
+.footer .social-links img {
+  height: 1.5rem;
 }
 
 .footer .nav-footer {
-  width: 40rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .footer .nav-footer a {
@@ -1039,24 +954,19 @@ ul.list-untitled li:before {
 }
 
 .footer .nav-footer a:not(:last-child) {
-  margin-right: 2rem;
-  width: 100%;
+  margin-bottom: 0.5rem;
 }
 
-.footer .social-links {
-  margin-right: 8.25rem;
-}
-
-.footer .social-links a:not(:last-child) {
-  margin-right: 0.5rem;
-}
-
-.footer .social-links img {
-  height: 1.25rem;
-}
-
+.footer .nav-footer,
 .footer .e-address {
-  margin-right: 4rem;
+  margin-right: 8.4375rem;
+}
+
+.footer .list-title {
+  font-size: 1.6875rem;
+  font-weight: bold;
+  font-family: "Nunito", "Lato", sans-serif;
+  margin-bottom: 0.5rem;
 }
 
 .footer .e-address,
@@ -1462,4 +1372,10 @@ ul.list-untitled li:before {
           animation-name: rotateUpLeft;
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
+}
+
+@media (min-width: 1920px) {
+  html {
+    font-size: 0.833333333333333333vw;
+  }
 }

@@ -15,7 +15,7 @@
           Мы проконсультируем вас и поможем в решении ваших вопросов. Оставляйте
           заявку - мы ответим уже через 10 минут!
         </p>
-        <button class="button-blue main-button">Оставить заявку</button>
+        <a href="#section-contact" class="button-blue main-button toContact">Оставить заявку</a>
       </div>
       <img src="img/sprite.svg#talk" alt="Talk" class="main-illustration" />
     </main>
@@ -175,28 +175,20 @@
     </section>
     <!-- /.section section-aim -->
 
-    <section class="section section-contact">
+    <section class="section section-contact" id="section-contact">
       <div class="container">
         <h2 class="section-title">Оставь заявку на бесплатную консультацию</h2>
         <form>
           <div class="form-wrapper">
-            <div class="inputs">
+            <textarea class="textarea textarea-contact" placeholder="Ваше сообщение..."></textarea>
+            <div class="inputs-wrapper">
               <input type="text" placeholder="ФИО" />
               <input type="text" placeholder="Email" />
               <input type="text" placeholder="Номер телефона" class="maskedInput" />
+              <button class="button-blue button-form">Записаться</button>
             </div>
-            <!-- /.inputs -->
-            <div class="service">
-              <h3 class="title-form">Услуга</h3>
-              <span><input name="contact" id="radio-insurance" type="radio" checked /><label for="radio-insurance">Страхование</label></span>
-              <span><input name="contact" id="radio-nostrification" type="radio"/><label for="radio-nostrification">Выписка из банка</label></span>
-              <span><input name="contact" id="radio-statement" type="radio"/><label for="radio-statement">Нострификация</label></span>
-              <span><input name="contact" id="radio-confirmation" type="radio" /><label for="radio-confirmation">Подтверждение о проживании</label></span>
-            </div>
-            <!-- /.service -->
           </div>
           <!-- /.form-wrapper -->
-          <button class="button-blue button-form">Записаться</button>
         </form>
       </div>
       <img src="img/sprite.svg#videocall" alt="Videocall" class="contact-illustration"/>

@@ -3227,32 +3227,6 @@ $(document).ready(function() {
     touchTreshold: 20, 
   });
 
-  // Change button's background-color on Contact's section
-  $('.section-contact input[type="radio"]').on("click", function() {
-    var $index = $(this).parent().index();
-    if ($index == 1) {
-      $('.section-contact .button-form').removeClass('button-purple');
-      $('.section-contact .button-form').removeClass('button-violet');
-      $('.section-contact .button-form').removeClass('button-pink');
-      $('.section-contact .button-form').addClass('button-blue');
-    } else if ($index == 2) {
-      $('.section-contact .button-form').removeClass('button-blue');
-      $('.section-contact .button-form').removeClass('button-violet');
-      $('.section-contact .button-form').removeClass('button-pink');
-      $('.section-contact .button-form').addClass('button-purple');
-    } else if ($index == 3) {
-      $('.section-contact .button-form').removeClass('button-purple');
-      $('.section-contact .button-form').removeClass('button-blue');
-      $('.section-contact .button-form').removeClass('button-pink');
-      $('.section-contact .button-form').addClass('button-violet');
-    } else {
-      $('.section-contact .button-form').removeClass('button-purple');
-      $('.section-contact .button-form').removeClass('button-violet');
-      $('.section-contact .button-form').removeClass('button-blue');
-      $('.section-contact .button-form').addClass('button-pink');
-    }
-  })
-
   // Fix Header
   let $header = $('.header');
   
@@ -3263,5 +3237,13 @@ $(document).ready(function() {
       $header.removeClass('header-float');
     }
   });
+
+  // Masked Input
   $('.maskedInput').mask('9 (999) 999-99-99');
+
+  // Smooth scrolling to anchor
+  $('.toContact').on('click', function(e){
+    $('html,body').stop().animate({ scrollTop: $('#section-contact').offset().top }, 1000);
+    e.preventDefault();
+  });
 })

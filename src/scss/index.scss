@@ -16,8 +16,8 @@
   box-sizing: border-box;
 }
 html {
-  font-size: 1vw;
-  font-family: 'Lato', 'Nunito', sans-serif;
+  font-size: 0.833333333333333333vw;
+  font-family: $lato;
   overflow-x: hidden;
 }
 body {
@@ -53,6 +53,11 @@ input,
 button {
   outline: none;
 }
+textarea {
+  font-family: $lato;
+  border: none;
+  resize: none;
+}
 button {
   cursor: pointer;
   font-weight: bold;
@@ -63,7 +68,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Nunito', 'Lato', sans-serif;
+  font-family: $nunito;
 }
 .container {
   padding: 0 16rem;
@@ -117,18 +122,18 @@ h6 {
   z-index: 100;
   width: 100%;
   padding: 1.5rem 0;
-  background-color: $blue;
-  animation-duration: 100s;
-  animation-name: gradient;
-  animation-iteration-count: infinite;
+  background-color: #fff;
+  // animation-duration: 100s;
+  // animation-name: gradient;
+  // animation-iteration-count: infinite;
   .container {
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
   .logo-header {
-    font-family: 'Nunito', 'Lato', sans-serif;
-    color: #fff;
+    font-family: $nunito;
+    color: $black;
     font-size: 1.125rem;
     font-weight: bold;
   }
@@ -137,31 +142,34 @@ h6 {
     position: relative;
     transition: 0.15s;
     font-size: 1.125rem;
-    color: #fff;
+    color: $black;
     border-radius: 1.0625rem;
     &:hover {
-      color: #fff;
-      background-color: rgba($color: #fff, $alpha: 0.3);
+      background-color: rgba($color: $black, $alpha: 0.1);
     }
     &:not(:last-child) {
-      margin-right: 0.625rem;
+      margin-right: 0.4375rem;
     }
     &.nav-item-active {
-      position: relative;
-      color: $blue;
       font-weight: bold;
-      background-color: #fff;
-      animation-duration: 100s;
-      animation-name: gradientColor;
-      animation-iteration-count: infinite;
+    }
+    &.nav-contact {
+      color: #fff;
+      background-color: $blue;
+      &:hover {
+        background-color: $blue;
+      }
     }
   }
   &.header-float {
     padding: 0.5rem 0;
     .nav-item {
       background-color: inherit;
-      &.nav-item-active {
-        color: #fff !important;
+    }
+    .nav-contact {
+      color: $black;
+      &:hover {
+        background-color: inherit;
       }
     }
   }
@@ -186,9 +194,10 @@ h6 {
     transition-property: 0.15s;
     transform: scale(1);
     padding: 1rem 4rem;
-    animation-duration: 100s;
-    animation-name: gradient;
-    animation-iteration-count: infinite;
+    background-color: $blue;
+    // animation-duration: 100s;
+    // animation-name: gradient;
+    // animation-iteration-count: infinite;
     &.button-blue:hover {
       box-shadow: none;
     }
@@ -202,13 +211,13 @@ h6 {
   .main-illustration {
     position: absolute;
     top: 9.3125rem;
-    right: 5.5rem;
-    width: 36.5625rem;
+    right: 16rem;
+    width: 40rem;
   }
 }
 .button-blue {
   transition: 0.3s;
-  font-family: 'Lato', 'Nunito', sans-serif;
+  font-family: $lato;
   font-size: 1.5rem;
   color: #fff;
   background-color: $blue;
@@ -220,7 +229,7 @@ h6 {
 }
 .button-purple {
   transition: 0.3s;
-  font-family: 'Lato', 'Nunito', sans-serif;
+  font-family: $lato;
   font-size: 1.5rem;
   color: #fff;
   background-color: $purple;
@@ -232,7 +241,7 @@ h6 {
 }
 .button-violet {
   transition: 0.3s;
-  font-family: 'Lato', 'Nunito', sans-serif;
+  font-family: $lato;
   font-size: 1.5rem;
   color: #fff;
   background-color: $violet;
@@ -244,7 +253,7 @@ h6 {
 }
 .button-pink {
   transition: 0.3s;
-  font-family: 'Lato', 'Nunito', sans-serif;
+  font-family: $lato;
   font-size: 1.5rem;
   color: #fff;
   background-color: $pink;
@@ -300,7 +309,7 @@ h6 {
     margin-left: auto;
     font-size: 2rem;
     font-weight: bold;
-    font-family: 'Nunito', 'Lato', sans-serif;
+    font-family: $nunito;
   }
 }
 .link-arrow {
@@ -389,7 +398,7 @@ ul.list-untitled {
       margin: 0 0 3rem 0;
     }
     &:before {
-      font-family: 'Nunito', 'Lato', sans-serif;
+      font-family: $nunito;
       font-size: 4rem;
       line-height: 4rem;
       font-weight: 800;
@@ -416,10 +425,10 @@ ul.list-untitled {
     }
   }
   .confidence-illustration {
-    width: 26rem;
+    width: 35rem;
     position: absolute;
-    top: 6rem;
-    right: 7rem;
+    top: 3rem;
+    right: 16rem;
   }
 }
 .section-news {
@@ -543,125 +552,53 @@ ul.list-untitled {
 .section-contact {
   position: relative;
   padding: 8rem 0 4rem 0;
-  .section-ttile {
-    width: 39.4375rem;
+  .section-title {
+    width: 40rem;
+    line-height: 132%;
   }
   .form-wrapper {
+    width: fit-content;
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: row-reverse wrap;
   }
-  .inputs {
+  .inputs-wrapper {
     display: flex;
-    flex-flow: column nowrap;
-    margin-right: 4rem;
+    flex-flow: column wrap;
+    margin-right: 1.5rem;
   }
   input[type='text'] {
     transition: 0.3s;
-    width: 21.1875rem;
     border-radius: 0.5rem;
-    padding: 1rem 2rem;
+    padding: 0.5rem 1.5rem;
     color: $light-blue;
-    font-family: 'Lato', 'Nunito', sans-serif;
+    font-family: $lato;
     font-size: 1rem;
     border: none;
-    &:not(:last-child) {
+    &:not(:nth-child(n + 3)) {
       margin-bottom: 1rem;
     }
   }
-  .service {
-    display: flex;
-    flex-direction: column;
-    span {
-      display: flex;
-      align-items: center;
-      &:not(:last-child) {
-        margin-bottom: 1rem;
-      }
-    }
-    input {
-      position: absolute;
-      margin: 0 1rem 0 0;
-      opacity: 0;
-      width: 1.5rem;
-      height: 1.5rem;
-    }
-    label {
-      padding-left: 2.25rem;
-      position: relative;
-      font-size: 1rem;
-      line-height: 103.5%;
-      width: 10.4375rem;
-      &:before {
-        content: '';
-        transition: 0.3s;
-        display: block;
-        width: 1rem;
-        height: 1rem;
-        border-radius: 1.25rem;
-        position: absolute;
-        border: 0.125rem solid $light-blue;
-        left: 0;
-      }
-      &:after {
-        content: '';
-        transition: 0.3s;
-        display: block;
-        width: 0.625rem;
-        height: 0.625rem;
-        border-radius: 0.5rem;
-        position: absolute;
-        left: 0.3125rem;
-        top: 0.3125rem;
-        transform: scale(0);
-        opacity: 0;
-      }
-    }
-    input:checked + label:after {
-      opacity: 1;
-      transform: scale(1);
-    }
-    // color of border on different radios
-    span:nth-child(2) input:checked + label:before {
-      border-color: $blue;
-    }
-    span:nth-child(3) input:checked + label:before {
-      border-color: $purple;
-    }
-    span:nth-child(4) input:checked + label:before {
-      border-color: $violet;
-    }
-    span:last-child input:checked + label:before {
-      transition: 0;
-      border-color: $pink;
-    }
-    // color of point checked radio
-    span:nth-child(2) input:checked + label:after {
-      background-color: $blue;
-    }
-    span:nth-child(3) input:checked + label:after {
-      background-color: $purple;
-    }
-    span:nth-child(4) input:checked + label:after {
-      background-color: $violet;
-    }
-    span:last-child input:checked + label:after {
-      background-color: $pink;
-    }
+  .textarea-contact {
+    font-size: 1rem;
+    color: $light-blue;
+    padding: 0.5rem 1.5rem;
+    border-radius: 0.625rem;
+    width: 20.8125rem;
+    height: auto;
   }
-  .title-form {
-    font-size: 2rem;
-    line-height: 103.5%;
-    margin: 0 0 1rem 0;
+  input[type='text'],
+  .button-form {
+    width: 16.3125rem;
   }
   .button-form {
-    margin-top: 2rem;
+    margin-top: 1.125rem;
     padding: 1rem 4.25rem;
   }
   .contact-illustration {
-    height: 29.375rem;
+    height: 35rem;
     position: absolute;
-    top: 6.75rem;
-    right: 1.5625rem;
+    top: 3rem;
+    right: 12rem;
   }
 }
 .footer {
@@ -669,10 +606,11 @@ ul.list-untitled {
   .container {
     position: relative;
     padding-top: 2rem;
-    padding-bottom: 6rem;
+    padding-bottom: 4.375rem;
     background-color: $footer;
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: column wrap;
+    max-height: 15.25rem;
     &:after {
       content: '© meridian-50 2020';
       font-size: 0.75rem;
@@ -683,34 +621,41 @@ ul.list-untitled {
     }
   }
   .logo-footer {
-    font-family: 'Nunito', 'Lato', sans-serif;
+    font-family: $nunito;
     font-size: 1.125rem;
     color: #fff;
-    margin-right: 9.125rem;
-    margin-bottom: 4rem;
-  }
-  .nav-footer {
-    width: 40rem;
-    a {
-      font-size: 1.125rem;
-      color: #fff;
-      &:not(:last-child) {
-        margin-right: 2rem;
-        width: 100%;
-      }
-    }
+    margin-right: 4rem;
+    margin-bottom: 1rem;
   }
   .social-links {
-    margin-right: 8.25rem;
+    margin-right: 4rem;
     a:not(:last-child) {
       margin-right: 0.5rem;
     }
     img {
-      height: 1.25rem;
+      height: 1.5rem;
     }
   }
+  .nav-footer {
+    display: flex;
+    flex-direction: column;
+    a {
+      font-size: 1.125rem;
+      color: #fff;
+      &:not(:last-child) {
+        margin-bottom: 0.5rem;
+      }
+    }
+  }
+  .nav-footer,
   .e-address {
-    margin-right: 4rem;
+    margin-right: 8.4375rem;
+  }
+  .list-title {
+    font-size: 1.6875rem;
+    font-weight: bold;
+    font-family: $nunito;
+    margin-bottom: 0.5rem;
   }
   .e-address,
   .address {
@@ -819,8 +764,8 @@ ul.list-untitled {
     @include glassCircle(#c0cfff, 40.125rem, 272.8125rem, -5.3125rem);
   }
 }
-// @media (min-width: 1441px) {
-//   html {
-//     font-size: 0.833333333333333333vw;
-//   }
-// }
+@media (min-width: 1920px) {
+  html {
+    font-size: 0.833333333333333333vw;
+  }
+}
