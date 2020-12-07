@@ -121,7 +121,7 @@ h6 {
   top: 0;
   z-index: 100;
   width: 100%;
-  padding: 1.46875rem 0;
+  padding: 0.5625rem 0;
   background-color: $blue;
   animation-duration: 100s;
   animation-name: gradient;
@@ -137,8 +137,12 @@ h6 {
     font-size: 1.125rem;
     font-weight: bold;
   }
+  .nav {
+    margin-left: auto;
+    margin-right: 2rem;
+  }
   .nav-item {
-    padding: 0.3125rem 1.625rem;
+    padding: 0.3125rem 0.5rem;
     position: relative;
     transition: 0.15s;
     font-size: 1.125rem;
@@ -148,7 +152,7 @@ h6 {
     animation-duration: 100s;
     animation-name: gradientColor;
     animation-iteration-count: infinite;
-    width: calc(6.25rem + 1.625rem * 2);
+    width: calc(6.25rem + 0.5rem * 2);
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -160,11 +164,21 @@ h6 {
     }
     &.nav-contact {
       color: #fff;
-      background-color: #fff;
       animation-duration: 100s;
       animation-name: gradient;
       animation-iteration-count: infinite;
       width: auto;
+    }
+  }
+  ul {
+    .header-socials {
+      display: flex;
+      justify-content: space-evenly;
+    }
+    .header-social {
+      img {
+        height: 1.5rem;
+      }
     }
   }
 }

@@ -255,7 +255,7 @@ h6 {
   top: 0;
   z-index: 100;
   width: 100%;
-  padding: 1.46875rem 0;
+  padding: 0.5625rem 0;
   background-color: #5e58f8;
   -webkit-animation-duration: 100s;
           animation-duration: 100s;
@@ -284,8 +284,13 @@ h6 {
   font-weight: bold;
 }
 
+.header .nav {
+  margin-left: auto;
+  margin-right: 2rem;
+}
+
 .header .nav-item {
-  padding: 0.3125rem 1.625rem;
+  padding: 0.3125rem 0.5rem;
   position: relative;
   -webkit-transition: 0.15s;
   -o-transition: 0.15s;
@@ -300,7 +305,7 @@ h6 {
           animation-name: gradientColor;
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
-  width: calc(6.25rem + 1.625rem * 2);
+  width: calc(6.25rem + 0.5rem * 2);
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -322,7 +327,6 @@ h6 {
 
 .header .nav-item.nav-contact {
   color: #fff;
-  background-color: #fff;
   -webkit-animation-duration: 100s;
           animation-duration: 100s;
   -webkit-animation-name: gradient;
@@ -330,6 +334,19 @@ h6 {
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
   width: auto;
+}
+
+.header ul .header-socials {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.header ul .header-social img {
+  height: 1.5rem;
 }
 
 .main {
