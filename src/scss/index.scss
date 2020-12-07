@@ -121,7 +121,7 @@ h6 {
   top: 0;
   z-index: 100;
   width: 100%;
-  padding: 2rem 0;
+  padding: 1.75rem 0;
   background-color: $blue;
   animation-duration: 100s;
   animation-name: gradient;
@@ -159,15 +159,6 @@ h6 {
       animation-duration: 100s;
       animation-name: gradientColor;
       animation-iteration-count: infinite;
-    }
-  }
-  &.header-float {
-    padding: 1rem 0;
-    .nav-item {
-      background-color: inherit;
-    }
-    .nav-contact {
-      color: #fff !important;
     }
   }
 }
