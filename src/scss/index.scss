@@ -130,6 +130,7 @@ h6 {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 0 0 0 16rem;
   }
   .logo-header {
     font-family: $futura;
@@ -146,12 +147,12 @@ h6 {
     position: relative;
     transition: 0.15s;
     font-size: 1.125rem;
-    color: #fff;
+    color: #000;
     border-radius: 1.0625rem;
     background-color: #fff;
-    animation-duration: 100s;
-    animation-name: gradientColor;
-    animation-iteration-count: infinite;
+    // animation-duration: 100s;
+    // animation-name: gradientColor;
+    // animation-iteration-count: infinite;
     width: calc(6.25rem + 0.5rem * 2);
     display: inline-flex;
     align-items: center;

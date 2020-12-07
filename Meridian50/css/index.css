@@ -275,6 +275,7 @@ h6 {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  padding: 0 0 0 16rem;
 }
 
 .header .logo-header {
@@ -296,15 +297,9 @@ h6 {
   -o-transition: 0.15s;
   transition: 0.15s;
   font-size: 1.125rem;
-  color: #fff;
+  color: #000;
   border-radius: 1.0625rem;
   background-color: #fff;
-  -webkit-animation-duration: 100s;
-          animation-duration: 100s;
-  -webkit-animation-name: gradientColor;
-          animation-name: gradientColor;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
   width: calc(6.25rem + 0.5rem * 2);
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
