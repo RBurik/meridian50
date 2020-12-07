@@ -121,7 +121,6 @@ h6 {
   top: 0;
   z-index: 100;
   width: 100%;
-  padding: 0.5625rem 0;
   background-color: $blue;
   animation-duration: 100s;
   animation-name: gradient;
@@ -131,6 +130,7 @@ h6 {
     align-items: center;
     justify-content: space-between;
     padding: 0 0 0 16rem;
+    height: 4.9375rem;
   }
   .logo-header {
     font-family: $futura;
@@ -148,6 +148,7 @@ h6 {
     transition: 0.15s;
     font-size: 1.125rem;
     color: #000;
+    font-weight: bold;
     border-radius: 1.0625rem;
     background-color: #fff;
     // animation-duration: 100s;

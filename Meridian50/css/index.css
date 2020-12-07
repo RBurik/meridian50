@@ -255,7 +255,6 @@ h6 {
   top: 0;
   z-index: 100;
   width: 100%;
-  padding: 0.5625rem 0;
   background-color: #5e58f8;
   -webkit-animation-duration: 100s;
           animation-duration: 100s;
@@ -276,6 +275,7 @@ h6 {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 0 0 0 16rem;
+  height: 4.9375rem;
 }
 
 .header .logo-header {
@@ -298,6 +298,7 @@ h6 {
   transition: 0.15s;
   font-size: 1.125rem;
   color: #000;
+  font-weight: bold;
   border-radius: 1.0625rem;
   background-color: #fff;
   width: calc(6.25rem + 0.5rem * 2);
