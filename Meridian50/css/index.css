@@ -1,9 +1,17 @@
 @charset "UTF-8";
 
 @font-face {
-  font-family: "Lato-Bold";
+  font-family: "FuturaPT-Bold";
   font-display: swap;
-  src: url("../fonts/Lato-Bold.woff") format("woff"), url("../fonts/Lato-Bold.woff2") format("woff2");
+  src: url("../fonts/FuturaPT-Bold.woff") format("woff"), url("../fonts/FuturaPT-Bold.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "FuturaPT-ExtraBold";
+  font-display: swap;
+  src: url("../fonts/FuturaPT-ExtraBold.woff") format("woff"), url("../fonts/FuturaPT-ExtraBold.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
 }
@@ -17,17 +25,9 @@
 }
 
 @font-face {
-  font-family: "Nunito-Black";
+  font-family: "Lato-Bold";
   font-display: swap;
-  src: url("../fonts/Nunito-Black.woff") format("woff"), url("../fonts/Nunito-Black.woff2") format("woff2");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Nunito-Bold";
-  font-display: swap;
-  src: url("../fonts/Nunito-Bold.woff") format("woff"), url("../fonts/Nunito-Bold.woff2") format("woff2");
+  src: url("../fonts/Lato-Bold.woff") format("woff"), url("../fonts/Lato-Bold.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
 }
@@ -74,7 +74,7 @@
 
 html {
   font-size: 0.833333333333333333vw;
-  font-family: "Lato", "Nunito", sans-serif;
+  font-family: "Lato", "Futura Pt", sans-serif;
   overflow-x: hidden;
 }
 
@@ -118,7 +118,7 @@ button {
 }
 
 textarea {
-  font-family: "Lato", "Nunito", sans-serif;
+  font-family: "Lato", "Futura Pt", sans-serif;
   border: none;
   resize: none;
 }
@@ -134,7 +134,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Nunito", "Lato", sans-serif;
+  font-family: "Futura Pt", "Lato", sans-serif;
 }
 
 .container {
@@ -255,7 +255,7 @@ h6 {
   top: 0;
   z-index: 100;
   width: 100%;
-  padding: 1.5rem 0;
+  padding: 2rem 0;
   background-color: #5e58f8;
   -webkit-animation-duration: 100s;
           animation-duration: 100s;
@@ -278,7 +278,7 @@ h6 {
 }
 
 .header .logo-header {
-  font-family: "Nunito", "Lato", sans-serif;
+  font-family: "Futura Pt", "Lato", sans-serif;
   color: #fff;
   font-size: 1.125rem;
   font-weight: bold;
@@ -319,7 +319,7 @@ h6 {
 }
 
 .header.header-float {
-  padding: 0.5rem 0;
+  padding: 1rem 0;
 }
 
 .header.header-float .nav-item {
@@ -340,7 +340,7 @@ h6 {
   font-size: 3rem;
   font-weight: 800;
   line-height: 103.5%;
-  max-width: 21.125rem;
+  max-width: 26.125rem;
 }
 
 .main .main-subtitle {
@@ -395,7 +395,7 @@ h6 {
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;
-  font-family: "Lato", "Nunito", sans-serif;
+  font-family: "Lato", "Futura Pt", sans-serif;
   font-size: 1.5rem;
   color: #fff;
   background-color: #5e58f8;
@@ -412,7 +412,7 @@ h6 {
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;
-  font-family: "Lato", "Nunito", sans-serif;
+  font-family: "Lato", "Futura Pt", sans-serif;
   font-size: 1.5rem;
   color: #fff;
   background-color: #9856da;
@@ -429,7 +429,7 @@ h6 {
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;
-  font-family: "Lato", "Nunito", sans-serif;
+  font-family: "Lato", "Futura Pt", sans-serif;
   font-size: 1.5rem;
   color: #fff;
   background-color: #c756da;
@@ -446,7 +446,7 @@ h6 {
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;
-  font-family: "Lato", "Nunito", sans-serif;
+  font-family: "Lato", "Futura Pt", sans-serif;
   font-size: 1.5rem;
   color: #fff;
   background-color: #fe98e8;
@@ -530,7 +530,7 @@ h6 {
   margin-left: auto;
   font-size: 2rem;
   font-weight: bold;
-  font-family: "Nunito", "Lato", sans-serif;
+  font-family: "Futura Pt", "Lato", sans-serif;
 }
 
 .link-arrow:hover img {
@@ -639,7 +639,7 @@ ul.list-untitled li:before {
 }
 
 .section-confidence .text-cause:before {
-  font-family: "Nunito", "Lato", sans-serif;
+  font-family: "Futura Pt", "Lato", sans-serif;
   font-size: 4rem;
   line-height: 4rem;
   font-weight: 800;
@@ -865,7 +865,7 @@ ul.list-untitled li:before {
   border-radius: 0.5rem;
   padding: 0.5rem 1.5rem;
   color: #8da1b5;
-  font-family: "Lato", "Nunito", sans-serif;
+  font-family: "Lato", "Futura Pt", sans-serif;
   font-size: 1rem;
   border: none;
 }
@@ -929,7 +929,7 @@ ul.list-untitled li:before {
 }
 
 .footer .logo-footer {
-  font-family: "Nunito", "Lato", sans-serif;
+  font-family: "Futura Pt", "Lato", sans-serif;
   font-size: 1.125rem;
   color: #fff;
   margin-right: 4rem;
@@ -975,7 +975,7 @@ ul.list-untitled li:before {
 .footer .list-title {
   font-size: 1.6875rem;
   font-weight: bold;
-  font-family: "Nunito", "Lato", sans-serif;
+  font-family: "Futura Pt", "Lato", sans-serif;
   margin-bottom: 0.5rem;
 }
 
@@ -1387,6 +1387,38 @@ ul.list-untitled li:before {
           animation-name: rotateUpLeft;
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
+}
+
+@font-face {
+  font-family: "FuturaPT-Bold";
+  font-display: swap;
+  src: url("../fonts/FuturaPT-Bold.woff") format("woff"), url("../fonts/FuturaPT-Bold.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "FuturaPT-ExtraBold";
+  font-display: swap;
+  src: url("../fonts/FuturaPT-ExtraBold.woff") format("woff"), url("../fonts/FuturaPT-ExtraBold.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Lato-Regular";
+  font-display: swap;
+  src: url("../fonts/Lato-Regular.woff") format("woff"), url("../fonts/Lato-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Lato-Bold";
+  font-display: swap;
+  src: url("../fonts/Lato-Bold.woff") format("woff"), url("../fonts/Lato-Bold.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
 }
 
 @media (min-width: 1920px) {

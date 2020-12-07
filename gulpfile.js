@@ -11,7 +11,7 @@ let path = {
     fonts: project_folder + "/fonts/", 
   }, 
   src: {
-    html: [source_folder + "/*.html", "!" + source_folder + "/_*.html"], 
+    html: [source_folder + "/index.html", "!" + source_folder + "/_*.html"], 
     css: source_folder + "/scss/index.scss", 
     js: source_folder + "/js/index.js", 
     img: source_folder + "/img/**/*.{jpg, png, svg, gif, ico, webp}", 

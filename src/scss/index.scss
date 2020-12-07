@@ -68,7 +68,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: $nunito;
+  font-family: $futura;
 }
 .container {
   padding: 0 16rem;
@@ -121,7 +121,7 @@ h6 {
   top: 0;
   z-index: 100;
   width: 100%;
-  padding: 1.5rem 0;
+  padding: 2rem 0;
   background-color: $blue;
   animation-duration: 100s;
   animation-name: gradient;
@@ -132,7 +132,7 @@ h6 {
     justify-content: space-between;
   }
   .logo-header {
-    font-family: $nunito;
+    font-family: $futura;
     color: #fff;
     font-size: 1.125rem;
     font-weight: bold;
@@ -162,7 +162,7 @@ h6 {
     }
   }
   &.header-float {
-    padding: 0.5rem 0;
+    padding: 1rem 0;
     .nav-item {
       background-color: inherit;
     }
@@ -179,7 +179,7 @@ h6 {
     font-size: 3rem;
     font-weight: 800;
     line-height: 103.5%;
-    max-width: 21.125rem;
+    max-width: 26.125rem;
   }
   .main-subtitle {
     margin: 0 0 3rem 0;
@@ -306,7 +306,7 @@ h6 {
     margin-left: auto;
     font-size: 2rem;
     font-weight: bold;
-    font-family: $nunito;
+    font-family: $futura;
   }
 }
 .link-arrow {
@@ -395,7 +395,7 @@ ul.list-untitled {
       margin: 0 0 3rem 0;
     }
     &:before {
-      font-family: $nunito;
+      font-family: $futura;
       font-size: 4rem;
       line-height: 4rem;
       font-weight: 800;
@@ -618,7 +618,7 @@ ul.list-untitled {
     }
   }
   .logo-footer {
-    font-family: $nunito;
+    font-family: $futura;
     font-size: 1.125rem;
     color: #fff;
     margin-right: 4rem;
@@ -651,7 +651,7 @@ ul.list-untitled {
   .list-title {
     font-size: 1.6875rem;
     font-weight: bold;
-    font-family: $nunito;
+    font-family: $futura;
     margin-bottom: 0.5rem;
   }
   .e-address,
@@ -764,6 +764,8 @@ ul.list-untitled {
     @include glassCircle(#c0cfff, 40.125rem, 272.8125rem, -5.3125rem);
   }
 }
+// News.scss
+@import 'news';
 @media (min-width: 1920px) {
   html {
     font-size: 0.833333333333333333vw;
