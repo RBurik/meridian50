@@ -17,7 +17,7 @@
 }
 
 @font-face {
-  font-family: "Lato-Regular";
+  font-family: "Lato";
   font-display: swap;
   src: url("../fonts/Lato-Regular.woff") format("woff"), url("../fonts/Lato-Regular.woff2") format("woff2");
   font-weight: 400;
@@ -25,7 +25,7 @@
 }
 
 @font-face {
-  font-family: "Lato-Bold";
+  font-family: "Lato";
   font-display: swap;
   src: url("../fonts/Lato-Bold.woff") format("woff"), url("../fonts/Lato-Bold.woff2") format("woff2");
   font-weight: 600;
@@ -255,7 +255,7 @@ h6 {
   top: 0;
   z-index: 100;
   width: 100%;
-  padding: 1.75rem 0;
+  padding: 1.46875rem 0;
   background-color: #5e58f8;
   -webkit-animation-duration: 100s;
           animation-duration: 100s;
@@ -293,10 +293,23 @@ h6 {
   font-size: 1.125rem;
   color: #fff;
   border-radius: 1.0625rem;
-}
-
-.header .nav-item:hover {
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: #fff;
+  -webkit-animation-duration: 100s;
+          animation-duration: 100s;
+  -webkit-animation-name: gradientColor;
+          animation-name: gradientColor;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  width: calc(6.25rem + 1.625rem * 2);
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .header .nav-item:not(:last-child) {
@@ -312,10 +325,11 @@ h6 {
   background-color: #fff;
   -webkit-animation-duration: 100s;
           animation-duration: 100s;
-  -webkit-animation-name: gradientColor;
-          animation-name: gradientColor;
+  -webkit-animation-name: gradient;
+          animation-name: gradient;
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
+  width: auto;
 }
 
 .main {
@@ -896,7 +910,7 @@ ul.list-untitled li:before {
   position: relative;
   padding-top: 2rem;
   padding-bottom: 4.375rem;
-  background-color: #2f3653;
+  background-color: #5e58f8;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1375,38 +1389,6 @@ ul.list-untitled li:before {
           animation-name: rotateUpLeft;
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
-}
-
-@font-face {
-  font-family: "FuturaPT";
-  font-display: swap;
-  src: url("../fonts/FuturaPT-Bold.woff") format("woff"), url("../fonts/FuturaPT-Bold.woff2") format("woff2");
-  font-weight: 600;
-  font-style: bold;
-}
-
-@font-face {
-  font-family: "FuturaPT";
-  font-display: swap;
-  src: url("../fonts/FuturaPT-ExtraBold.woff") format("woff"), url("../fonts/FuturaPT-ExtraBold.woff2") format("woff2");
-  font-weight: 800;
-  font-style: black;
-}
-
-@font-face {
-  font-family: "Lato-Regular";
-  font-display: swap;
-  src: url("../fonts/Lato-Regular.woff") format("woff"), url("../fonts/Lato-Regular.woff2") format("woff2");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Lato-Bold";
-  font-display: swap;
-  src: url("../fonts/Lato-Bold.woff") format("woff"), url("../fonts/Lato-Bold.woff2") format("woff2");
-  font-weight: 600;
-  font-style: bold;
 }
 
 @media (min-width: 1920px) {

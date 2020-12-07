@@ -121,7 +121,7 @@ h6 {
   top: 0;
   z-index: 100;
   width: 100%;
-  padding: 1.75rem 0;
+  padding: 1.46875rem 0;
   background-color: $blue;
   animation-duration: 100s;
   animation-name: gradient;
@@ -144,9 +144,14 @@ h6 {
     font-size: 1.125rem;
     color: #fff;
     border-radius: 1.0625rem;
-    &:hover {
-      background-color: rgba($color: #fff, $alpha: 0.3);
-    }
+    background-color: #fff;
+    animation-duration: 100s;
+    animation-name: gradientColor;
+    animation-iteration-count: infinite;
+    width: calc(6.25rem + 1.625rem * 2);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     &:not(:last-child) {
       margin-right: 0.4375rem;
     }
@@ -157,8 +162,9 @@ h6 {
       color: #fff;
       background-color: #fff;
       animation-duration: 100s;
-      animation-name: gradientColor;
+      animation-name: gradient;
       animation-iteration-count: infinite;
+      width: auto;
     }
   }
 }
@@ -755,8 +761,6 @@ ul.list-untitled {
     @include glassCircle(#c0cfff, 40.125rem, 272.8125rem, -5.3125rem);
   }
 }
-// News.scss
-@import 'news';
 @media (min-width: 1920px) {
   html {
     font-size: 0.833333333333333333vw;

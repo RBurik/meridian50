@@ -1,3 +1,164 @@
+@mixin font($font_name, $file_name, $weight, $style) {
+  @font-face {
+    font-family: $font_name;
+    font-display: swap;
+    src: url('../fonts/#{$file_name}.woff') format('woff'),
+      url('../fonts/#{$file_name}.woff2') format('woff2');
+    font-weight: #{$weight};
+    font-style: #{$style};
+  }
+}
 @import 'fonts';
 @import 'variables';
 @import 'mixins';
+@import 'slick-slider';
+* {
+  box-sizing: border-box;
+}
+html {
+  font-size: 0.833333333333333333vw;
+  font-family: $lato;
+  overflow-x: hidden;
+}
+body {
+  position: relative;
+  padding: 0;
+  margin: 0;
+}
+ul {
+  margin: 0;
+  padding: 0;
+}
+li {
+  list-style: none;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span,
+b,
+i,
+a {
+  color: $black;
+}
+a {
+  text-decoration: none;
+}
+textarea,
+input,
+button {
+  outline: none;
+}
+textarea {
+  font-family: $lato;
+  border: none;
+  resize: none;
+}
+button {
+  cursor: pointer;
+  font-weight: bold;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $futura;
+}
+.container {
+  padding: 0 16rem;
+  width: 100%;
+}
+@keyframes gradient {
+  from {
+    background-color: $blue;
+  }
+  20% {
+    background-color: $purple;
+  }
+  40% {
+    background-color: $violet;
+  }
+  60% {
+    background-color: $pink;
+  }
+  80% {
+    background-color: $turquoise;
+  }
+  to {
+    background-color: $blue;
+  }
+}
+@keyframes gradientColor {
+  from {
+    color: $blue;
+  }
+  20% {
+    color: $purple;
+  }
+  40% {
+    color: $violet;
+  }
+  60% {
+    color: $pink;
+  }
+  80% {
+    color: $turquoise;
+  }
+  to {
+    color: $blue;
+  }
+}
+.header {
+  transition: 0.1s;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+  padding: 1.75rem 0;
+  background-color: $blue;
+  animation-duration: 100s;
+  animation-name: gradient;
+  animation-iteration-count: infinite;
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .logo-header {
+    font-family: $futura;
+    color: #fff;
+    font-size: 1.125rem;
+    font-weight: bold;
+  }
+  .nav-item {
+    padding: 0.3125rem 1.625rem;
+    position: relative;
+    transition: 0.15s;
+    font-size: 1.125rem;
+    color: #fff;
+    border-radius: 1.0625rem;
+    &:hover {
+      background-color: rgba($color: #fff, $alpha: 0.3);
+    }
+    &:not(:last-child) {
+      margin-right: 0.4375rem;
+    }
+    &.nav-item-active {
+      font-weight: bold;
+    }
+    &.nav-contact {
+      color: #fff;
+      background-color: #fff;
+      animation-duration: 100s;
+      animation-name: gradientColor;
+      animation-iteration-count: infinite;
+    }
+  }
+}
