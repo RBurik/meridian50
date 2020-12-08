@@ -129,7 +129,7 @@ h6 {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 0 0 16rem;
+    padding: 0 16rem;
     height: 4.9375rem;
   }
   .logo-header {
@@ -138,19 +138,14 @@ h6 {
     font-size: 1.125rem;
     font-weight: bold;
   }
-  .nav {
-    margin-left: auto;
-    margin-right: 2rem;
-  }
   .nav-item {
     padding: 0.3125rem 0.5rem;
     position: relative;
     transition: 0.15s;
-    font-size: 1.125rem;
-    color: #000;
-    font-weight: bold;
-    border-radius: 1.0625rem;
-    background-color: #fff;
+    font-size: 1.25rem;
+    color: #fff;
+    border-radius: 0.5rem;
+    // border-radius: 1.0625rem;
     // animation-duration: 100s;
     // animation-name: gradientColor;
     // animation-iteration-count: infinite;
@@ -158,11 +153,18 @@ h6 {
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    &:hover {
+      background-color: rgba($color: #fff, $alpha: 0.3);
+    }
     &:not(:last-child) {
       margin-right: 0.4375rem;
     }
     &.nav-item-active {
       font-weight: bold;
+      background-color: #fff;
+      animation-duration: 100s;
+      animation-name: gradientColor;
+      animation-iteration-count: infinite;
     }
     &.nav-contact {
       color: #fff;
@@ -173,13 +175,15 @@ h6 {
     }
   }
   ul {
+    margin-right: auto;
+    margin-left: 4rem;
     .header-socials {
       display: flex;
       justify-content: space-evenly;
     }
     .header-social {
       img {
-        height: 1.5rem;
+        height: 1.75rem;
       }
     }
   }

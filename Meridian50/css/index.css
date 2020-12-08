@@ -274,7 +274,7 @@ h6 {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 0 0 0 16rem;
+  padding: 0 16rem;
   height: 4.9375rem;
 }
 
@@ -285,22 +285,15 @@ h6 {
   font-weight: bold;
 }
 
-.header .nav {
-  margin-left: auto;
-  margin-right: 2rem;
-}
-
 .header .nav-item {
   padding: 0.3125rem 0.5rem;
   position: relative;
   -webkit-transition: 0.15s;
   -o-transition: 0.15s;
   transition: 0.15s;
-  font-size: 1.125rem;
-  color: #000;
-  font-weight: bold;
-  border-radius: 1.0625rem;
-  background-color: #fff;
+  font-size: 1.25rem;
+  color: #fff;
+  border-radius: 0.5rem;
   width: calc(6.25rem + 0.5rem * 2);
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -313,12 +306,23 @@ h6 {
           justify-content: center;
 }
 
+.header .nav-item:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
 .header .nav-item:not(:last-child) {
   margin-right: 0.4375rem;
 }
 
 .header .nav-item.nav-item-active {
   font-weight: bold;
+  background-color: #fff;
+  -webkit-animation-duration: 100s;
+          animation-duration: 100s;
+  -webkit-animation-name: gradientColor;
+          animation-name: gradientColor;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
 }
 
 .header .nav-item.nav-contact {
@@ -332,6 +336,11 @@ h6 {
   width: auto;
 }
 
+.header ul {
+  margin-right: auto;
+  margin-left: 4rem;
+}
+
 .header ul .header-socials {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -342,7 +351,7 @@ h6 {
 }
 
 .header ul .header-social img {
-  height: 1.5rem;
+  height: 1.75rem;
 }
 
 .main {
