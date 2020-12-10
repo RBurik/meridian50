@@ -19,23 +19,25 @@ $(document).ready(function() {
     touchTreshold: 20, 
   });
 
-  // Fix Header
-  let $header = $('.header');
-  
-  $(window).scroll(function() {
-    if( $(this).scrollTop() > 256 ) {
-      $header.addClass('header-float');
-    } else {
-      $header.removeClass('header-float');
-    }
-  });
-
   // Masked Input
   $('.maskedInput').mask('9 (999) 999-99-99');
 
-  // Smooth scrolling to anchor
-  $('.toContact').on('click', function(e){
-    $('html,body').stop().animate({ scrollTop: $('#section-contact').offset().top }, 1000);
-    e.preventDefault();
-  });
+  // Popup
+  $('.toContact').on("click", function() {
+    var $pp = $('.popup');
+    $pp.addClass('popup-active');
+    $('html').addClass('fixed-page');
+    $(document).mouseup(function (e){ // событие клика по веб-документу
+      if (!$pp.is(e.target) // если клик был не по нашему блоку
+          && $pp.has(e.target).length === 0) { // и не по его дочерним элементам
+        $pp.removeClass('popup-active');
+        $('html').removeClass('fixed-page');
+      }
+    })
+  })
+})
+$('.popup-escape').on("click", function() {
+  var $pp = $('.popup');
+  $pp.removeClass('popup-active');
+  $('html').removeClass('fixed-page');
 })

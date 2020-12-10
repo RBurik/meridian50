@@ -114,6 +114,9 @@ h6 {
     color: $blue;
   }
 }
+.fixed-page {
+  overflow: hidden;
+}
 .header {
   transition: 0.1s;
   position: fixed;
@@ -137,6 +140,10 @@ h6 {
     color: #fff;
     font-size: 1.125rem;
     font-weight: bold;
+  }
+  .nav {
+    display: flex;
+    align-items: center;
   }
   .nav-item {
     padding: 0.3125rem 0.5rem;
@@ -174,17 +181,14 @@ h6 {
       width: auto;
     }
   }
-  ul {
-    margin-right: auto;
-    margin-left: 4rem;
-    .header-socials {
-      display: flex;
-      justify-content: space-evenly;
+  .nav-phone {
+    border: 0.0625rem solid #fff;
+    width: auto;
+    &:hover {
+      background-color: rgba($color: #fff, $alpha: 0.1);
     }
-    .header-social {
-      img {
-        height: 1.75rem;
-      }
+    img {
+      width: 1.75rem;
     }
   }
 }
@@ -278,34 +282,78 @@ h6 {
   }
 }
 .section-services {
-  padding: 4rem 0;
-  .services {
+  padding: 6rem 0 4rem 0;
+  .container {
     display: flex;
-    flex-flow: row wrap;
     justify-content: space-between;
-    margin-bottom: 1rem;
+    flex-flow: row wrap;
+  }
+  .services-heading {
+    width: calc(33% - 4rem / 3);
+  }
+  .section-title {
+    width: 27rem;
+  }
+  .section-subtitle {
+    margin: 0 0 1rem 0;
+  }
+  .button-services {
+    padding: 0.875rem 4.0625rem;
+    animation-duration: 100s;
+    animation-name: gradient;
+    animation-iteration-count: infinite;
+    &:hover {
+      box-shadow: none;
+    }
   }
   .card {
     position: relative;
     padding: 2rem;
     background-color: #fff;
-    min-height: 20.375rem;
     border-radius: 1rem;
-    width: calc(50% - 1rem);
-    &:not(:nth-child(n + 3)) {
-      margin-bottom: 2rem;
+    width: calc(33% - 4rem / 3);
+  }
+  .card-big {
+    min-height: 30rem;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    img {
+      margin-top: 1.5rem;
+      height: 9rem;
+    }
+    .card-title {
+      margin: 0 0 6rem 0;
+      font-size: 2rem;
+      line-height: 2rem;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
     }
   }
-  .card-title {
-    margin: 0 0 1rem 0;
-    font-size: 2rem;
-    line-height: 2rem;
-    font-weight: bold;
+  .card-small {
+    transition: 0.15s;
+    height: 10rem;
     display: flex;
     align-items: center;
-    img {
-      height: 3rem;
-      margin-right: 1rem;
+    .card-title {
+      margin: 0;
+      font-size: 2rem;
+      line-height: 2rem;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      img {
+        height: 5rem;
+      }
+    }
+    &:hover {
+      transform: scale(1.05);
+    }
+    &:active {
+      transform: scale(0.95);
     }
   }
   .button-card {
@@ -324,22 +372,6 @@ h6 {
     font-size: 2rem;
     font-weight: bold;
     font-family: $futura;
-  }
-}
-.link-arrow {
-  &:hover img {
-    transform: translateX(0.5rem);
-  }
-  picture {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  img {
-    transition: 0.15s;
-    margin-left: 1rem;
-    width: 2rem;
-    transform: translateX(0);
   }
 }
 ul.list-titled {
@@ -401,6 +433,15 @@ ul.list-untitled {
   text-transform: uppercase;
   margin: 0 0 3rem 0;
 }
+.section-subtitle {
+  font-family: $lato;
+  font-size: 1.75rem;
+  line-height: 103.5%;
+  font-weight: 900;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  // You should set your own margin on different sections
+}
 .section-confidence {
   padding: 4rem 0;
   position: relative;
@@ -443,6 +484,89 @@ ul.list-untitled {
     position: absolute;
     top: 3rem;
     right: 16rem;
+  }
+}
+.section-value {
+  padding: 4rem 0;
+  .section-title {
+    width: 40rem;
+  }
+  .list-title {
+    width: 60rem;
+    font-family: $lato;
+    font-size: 1.5rem;
+    margin: 0 0 2rem 0;
+  }
+  .cards {
+    width: 60rem;
+    padding-left: 8rem;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+  }
+  .card-value {
+    position: relative;
+  }
+  .card-value:before {
+    content: '';
+    background-image: url(../img/sprite.svg#checkmark);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 6rem;
+    width: 6rem;
+    display: block;
+    position: absolute;
+    left: -8rem;
+  }
+  .card-value:not(:last-child) {
+    margin-bottom: 2rem;
+  }
+  .card-title {
+    margin: 0 0 1rem 0;
+    font-size: 2rem;
+    line-height: 2rem;
+    font-weight: bold;
+  }
+  .card-content {
+    margin: 0;
+    font-size: 1.25rem;
+  }
+  .button-pink {
+    padding: 0.875rem 4.0625rem;
+  }
+}
+.section-steps {
+  padding: 4rem 0;
+  .section-title {
+    text-align: center;
+  }
+  .cards {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+  .card {
+    position: relative;
+    background-color: #fff;
+    padding: 2rem 4rem;
+    border-radius: 1rem;
+    width: calc(100% / 3 - 8rem / 3);
+    &:not(:last-child) {
+      &:after {
+        content: '';
+        background-image: url(../img/sprite.svg#arrow);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        height: 4rem;
+        width: 4rem;
+        display: block;
+        position: absolute;
+        top: calc(50% - 2rem);
+        right: -2rem;
+      }
+    }
   }
 }
 .section-news {
@@ -506,60 +630,40 @@ ul.list-untitled {
     transform: scale(1.1);
   }
 }
-.section-numbers {
-  padding: 4rem 0;
-  .container {
-    display: flex;
-    justify-content: space-between;
-    .card {
-      position: relative;
-      text-align: center;
-    }
-    .number {
-      position: relative;
-      z-index: 1;
-      margin: 0 0 1.75rem 0;
-      color: $turquoise;
-      font-size: 4rem;
-      font-weight: 800;
-    }
-    .number-text {
-      position: relative;
-      z-index: 1;
-      font-size: 1.5rem;
-      line-height: 103.5%;
-    }
-    img {
-      z-index: 0;
-      height: 13.375rem;
-      position: absolute;
-      top: 0;
-      left: -1rem;
-    }
-  }
-}
-.section-aim {
+.section-follow {
   padding: 2rem 0 4rem 0;
   .container {
-    padding-top: 3rem;
-    padding-bottom: 3rem;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
     position: relative;
     background-color: #fff;
-    .content {
-      margin-left: 4rem;
-      font-size: 1.5rem;
-      line-height: 142%;
-      width: 43.625rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .section-title {
+    margin: 0;
+  }
+  .socials {
+    display: flex;
+    align-items: center;
+    a {
+      transition: 0.3s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 6rem;
+      height: 6rem;
+      border-radius: 50%;
+      &:hover {
+        background-color: #f0f0f0;
+      }
+      &:not(:last-child) {
+        margin-right: 2rem;
+      }
     }
-    &:before {
-      content: '';
-      height: 100%;
-      width: 0.3125rem;
-      display: block;
-      background-color: $blue;
-      position: absolute;
-      top: 0;
-      left: 16rem;
+    img {
+      height: 4rem;
     }
   }
 }
@@ -616,7 +720,19 @@ ul.list-untitled {
   }
 }
 .footer {
+  position: relative;
   padding: 10.75rem 0 0 0;
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 6.75rem;
+    background-color: $footer;
+    width: 100%;
+    height: 4rem;
+    border-top-left-radius: 100%;
+    border-top-right-radius: 100%;
+  }
   .container {
     position: relative;
     padding-top: 2rem;
@@ -628,7 +744,7 @@ ul.list-untitled {
     &:after {
       content: '© meridian-50 2020';
       font-size: 0.75rem;
-      color: #fff;
+      color: $black;
       position: absolute;
       left: calc(50% - 3.375rem);
       bottom: 1rem;
@@ -637,7 +753,7 @@ ul.list-untitled {
   .logo-footer {
     font-family: $futura;
     font-size: 1.125rem;
-    color: #fff;
+    color: $black;
     margin-right: 4rem;
     margin-bottom: 1rem;
   }
@@ -655,7 +771,7 @@ ul.list-untitled {
     flex-direction: column;
     a {
       font-size: 1.125rem;
-      color: #fff;
+      color: $black;
       &:not(:last-child) {
         margin-bottom: 0.5rem;
       }
@@ -673,11 +789,8 @@ ul.list-untitled {
   }
   .e-address,
   .address {
-    color: #fff;
+    color: $black;
     font-size: 1rem;
-    li {
-      font-size: #fff;
-    }
     li:not(:last-child) {
       margin-bottom: 1rem;
     }
@@ -779,6 +892,98 @@ ul.list-untitled {
   }
   #c-18 {
     @include glassCircle(#c0cfff, 40.125rem, 272.8125rem, -5.3125rem);
+  }
+}
+
+// Popup
+.popup {
+  position: fixed;
+  z-index: 1000;
+  right: -100%;
+  top: 0;
+  transition: 0.3s;
+  box-shadow: 1.25rem 0 4rem 0.25rem #666;
+  width: calc(100% / 3);
+  background-color: #fff;
+  height: 100%;
+  &.popup-active {
+    right: 0;
+  }
+  &-heading {
+    padding: 2rem 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 0.0625rem solid $light-blue;
+    .title {
+      margin: 0;
+      font-size: 2.125rem;
+    }
+    .popup-escape {
+      transition: 0.15s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.75rem 0.5rem;
+      background-color: inherit;
+      border: none;
+      border-radius: 0.5rem;
+      img {
+        width: 1.5rem;
+      }
+      &:hover {
+        background-color: rgba($color: #000, $alpha: 0.1);
+      }
+    }
+  }
+  &-info {
+    padding: 4rem;
+  }
+  &-content {
+    font-size: 1.5rem;
+    margin: 0 0 2rem 0;
+  }
+  .phone {
+    transition: 0.15s;
+    display: block;
+    width: fit-content;
+    margin-bottom: 2rem;
+    padding: 1rem 2rem;
+    font-size: 1.25rem;
+    background-color: $blue;
+    color: #fff;
+    border-radius: 0.5rem;
+    animation-duration: 100s;
+    animation-name: gradient;
+    animation-iteration-count: infinite;
+  }
+  &-form {
+    display: flex;
+    flex-direction: column;
+    input {
+      margin-bottom: 1rem;
+    }
+    input,
+    textarea {
+      background-color: #f0f0f0;
+      font-size: 1.25rem;
+      padding: 1rem 2rem;
+      border-radius: 1rem;
+      border: none;
+    }
+    textarea {
+      height: 16rem;
+      margin-bottom: 1rem;
+    }
+    .form-submit {
+      padding: 1rem 2rem;
+      animation-duration: 100s;
+      animation-name: gradient;
+      animation-iteration-count: infinite;
+      &:hover {
+        box-shadow: none;
+      }
+    }
   }
 }
 @media (min-width: 1920px) {
