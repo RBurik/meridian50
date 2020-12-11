@@ -35,9 +35,9 @@ $(document).ready(function() {
       }
     })
   })
-})
-$('.popup-escape').on("click", function() {
-  var $pp = $('.popup');
-  $pp.removeClass('popup-active');
-  $('html').removeClass('fixed-page');
+  $('.popup-escape').on("click", function() {
+    var $pp = $('.popup');
+    $pp.removeClass('popup-active');
+    $('html').removeClass('fixed-page');
+  })
 })

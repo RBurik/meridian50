@@ -50,7 +50,8 @@ a {
 }
 textarea,
 input,
-button {
+button,
+select {
   outline: none;
 }
 textarea {
@@ -114,6 +115,9 @@ h6 {
     color: $blue;
   }
 }
+.fixed-page {
+  overflow: hidden;
+}
 .header {
   transition: 0.1s;
   position: fixed;
@@ -121,7 +125,6 @@ h6 {
   top: 0;
   z-index: 100;
   width: 100%;
-  padding: 1.75rem 0;
   background-color: $blue;
   animation-duration: 100s;
   animation-name: gradient;
@@ -130,6 +133,8 @@ h6 {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 0 16rem;
+    height: 4.9375rem;
   }
   .logo-header {
     font-family: $futura;
@@ -137,13 +142,21 @@ h6 {
     font-size: 1.125rem;
     font-weight: bold;
   }
+  .nav {
+    display: flex;
+    align-items: center;
+  }
   .nav-item {
-    padding: 0.3125rem 1.625rem;
+    padding: 0.3125rem 0.5rem;
     position: relative;
     transition: 0.15s;
-    font-size: 1.125rem;
+    font-size: 1.25rem;
     color: #fff;
-    border-radius: 1.0625rem;
+    border-radius: 0.5rem;
+    width: calc(6.25rem + 0.5rem * 2);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     &:hover {
       background-color: rgba($color: #fff, $alpha: 0.3);
     }
@@ -152,13 +165,361 @@ h6 {
     }
     &.nav-item-active {
       font-weight: bold;
-    }
-    &.nav-contact {
-      color: #fff;
       background-color: #fff;
       animation-duration: 100s;
       animation-name: gradientColor;
       animation-iteration-count: infinite;
     }
+    &.nav-contact {
+      color: #fff;
+      animation-duration: 100s;
+      animation-name: gradient;
+      animation-iteration-count: infinite;
+      width: auto;
+    }
+  }
+  .select-language {
+    margin-right: 0.4375rem;
+    background: none;
+    border: none;
+    color: #fff;
+    padding: 0.5rem;
+    option {
+      color: #000;
+    }
+  }
+  .nav-phone {
+    border: 0.0625rem solid #fff;
+    width: auto;
+    &:hover {
+      background-color: rgba($color: #fff, $alpha: 0.1);
+    }
+    img {
+      width: 1.75rem;
+    }
+  }
+}
+.button-blur {
+  transition: 0.15s;
+  border: none;
+  padding: 1rem 5.125rem;
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: bold;
+  background: rgba(245, 245, 251, 0.33);
+  backdrop-filter: blur(1.25rem);
+  border-radius: 0.75rem;
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+.button-blue {
+  transition: 0.3s;
+  font-family: $lato;
+  font-size: 1.5rem;
+  color: #fff;
+  background-color: $blue;
+  border: none;
+  border-radius: 0.75rem;
+  &:hover {
+    box-shadow: 0px 0px 1.375rem rgba($color: $blue, $alpha: 0.59);
+  }
+}
+.button-purple {
+  transition: 0.3s;
+  font-family: $lato;
+  font-size: 1.5rem;
+  color: #fff;
+  background-color: $purple;
+  border: none;
+  border-radius: 0.75rem;
+  &:hover {
+    box-shadow: 0px 0px 1.375rem rgba($color: $purple, $alpha: 0.59);
+  }
+}
+.button-violet {
+  transition: 0.3s;
+  font-family: $lato;
+  font-size: 1.5rem;
+  color: #fff;
+  background-color: $violet;
+  border: none;
+  border-radius: 0.75rem;
+  &:hover {
+    box-shadow: 0px 0px 1.375rem rgba($color: $violet, $alpha: 0.59);
+  }
+}
+.button-pink {
+  transition: 0.3s;
+  font-family: $lato;
+  font-size: 1.5rem;
+  color: #fff;
+  background-color: $pink;
+  border: none;
+  border-radius: 0.75rem;
+  &:hover {
+    box-shadow: 0px 0px 1.375rem rgba($color: $pink, $alpha: 0.59);
+  }
+}
+.main {
+  position: relative;
+  padding: 8.9375rem 0 3rem 0;
+  &-title {
+    margin: 0 0 3rem 16rem;
+    font-size: 3rem;
+    font-weight: 800;
+    line-height: 103.5%;
+  }
+}
+.slider {
+  padding: 0 4rem;
+}
+.slick-slide:not(:last-child) {
+  margin-right: 4rem;
+}
+.news-wrapper {
+  width: 100%;
+}
+.news-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.new {
+  outline: none;
+  position: relative;
+  padding: 4rem 2rem 2rem 2rem;
+  display: inline-flex;
+  flex-direction: column;
+  border-radius: 1rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  .button-blur {
+    position: absolute;
+    bottom: 2rem;
+    left: 2rem;
+  }
+}
+.new-large,
+.new-big {
+  height: 30rem;
+  margin-bottom: 2rem;
+}
+.new-large {
+  width: 54%;
+}
+.new-big {
+  width: 43%;
+}
+.new-small {
+  width: calc(100% / 3 - 4rem / 3);
+  height: 30rem;
+}
+.new-title {
+  margin: 0 0 2rem 0;
+  color: #fff;
+  font-size: 2.125rem;
+  line-height: 103.5%;
+  letter-spacing: 0.015em;
+}
+.new-content {
+  color: #fff;
+  margin: 0;
+  font-size: 1.5rem;
+  line-height: 142%;
+}
+.footer {
+  position: relative;
+  padding: 10.75rem 0 0 0;
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 6.75rem;
+    background-color: $footer;
+    width: 100%;
+    height: 4rem;
+    border-top-left-radius: 100%;
+    border-top-right-radius: 100%;
+  }
+  .container {
+    position: relative;
+    padding-top: 2rem;
+    padding-bottom: 4.375rem;
+    background-color: $footer;
+    display: flex;
+    flex-flow: column wrap;
+    max-height: 15.25rem;
+    &:after {
+      content: '© meridian-50 2020';
+      font-size: 0.75rem;
+      color: $black;
+      position: absolute;
+      left: calc(50% - 3.375rem);
+      bottom: 1rem;
+    }
+  }
+  .logo-footer {
+    font-family: $futura;
+    font-size: 1.125rem;
+    color: $black;
+    margin-right: 4rem;
+    margin-bottom: 1rem;
+  }
+  .social-links {
+    margin-right: 4rem;
+    a:not(:last-child) {
+      margin-right: 0.5rem;
+    }
+    img {
+      height: 1.5rem;
+    }
+  }
+  .nav-footer {
+    display: flex;
+    flex-direction: column;
+    a {
+      font-size: 1.125rem;
+      color: $black;
+      &:not(:last-child) {
+        margin-bottom: 0.5rem;
+      }
+    }
+  }
+  .nav-footer,
+  .e-address {
+    margin-right: 8.4375rem;
+  }
+  .list-title {
+    font-size: 1.6875rem;
+    font-weight: bold;
+    font-family: $futura;
+    margin-bottom: 0.5rem;
+  }
+  .e-address,
+  .address {
+    color: $black;
+    font-size: 1rem;
+    li:not(:last-child) {
+      margin-bottom: 1rem;
+    }
+  }
+}
+.section,
+.main,
+.footer {
+  position: relative;
+  z-index: 1;
+}
+@keyframes rotateUpLeft {
+  from {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: translate(24rem, 24rem);
+  }
+
+  to {
+    transform: translate(0, 0);
+  }
+}
+
+// Popup
+.popup {
+  position: fixed;
+  z-index: 1000;
+  right: -100%;
+  top: 0;
+  transition: 0.3s;
+  box-shadow: 1.25rem 0 4rem 0.25rem #666;
+  width: calc(100% / 3);
+  background-color: #fff;
+  height: 100%;
+  &.popup-active {
+    right: 0;
+  }
+  &-heading {
+    padding: 2rem 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 0.0625rem solid $light-blue;
+    .title {
+      margin: 0;
+      font-size: 2.125rem;
+    }
+    .popup-escape {
+      transition: 0.15s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.75rem 0.5rem;
+      background-color: inherit;
+      border: none;
+      border-radius: 0.5rem;
+      img {
+        width: 1.5rem;
+      }
+      &:hover {
+        background-color: rgba($color: #000, $alpha: 0.1);
+      }
+    }
+  }
+  &-info {
+    padding: 4rem;
+  }
+  &-content {
+    font-size: 1.5rem;
+    margin: 0 0 2rem 0;
+  }
+  .phone {
+    transition: 0.15s;
+    display: block;
+    width: fit-content;
+    margin-bottom: 2rem;
+    padding: 1rem 2rem;
+    font-size: 1.25rem;
+    background-color: $blue;
+    color: #fff;
+    border-radius: 0.5rem;
+    animation-duration: 100s;
+    animation-name: gradient;
+    animation-iteration-count: infinite;
+  }
+  &-form {
+    display: flex;
+    flex-direction: column;
+    input {
+      margin-bottom: 1rem;
+    }
+    input,
+    textarea {
+      background-color: #f0f0f0;
+      font-size: 1.25rem;
+      padding: 1rem 2rem;
+      border-radius: 1rem;
+      border: none;
+    }
+    textarea {
+      height: 16rem;
+      margin-bottom: 1rem;
+    }
+    .form-submit {
+      padding: 1rem 2rem;
+      animation-duration: 100s;
+      animation-name: gradient;
+      animation-iteration-count: infinite;
+      &:hover {
+        box-shadow: none;
+      }
+    }
+  }
+}
+@media (min-width: 1920px) {
+  html {
+    font-size: 0.833333333333333333vw;
   }
 }
