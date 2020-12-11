@@ -113,7 +113,8 @@ a {
 
 textarea,
 input,
-button {
+button,
+select {
   outline: none;
 }
 
@@ -347,6 +348,18 @@ h6 {
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
   width: auto;
+}
+
+.header .select-language {
+  margin-right: 0.4375rem;
+  background: none;
+  border: none;
+  color: #fff;
+  padding: 0.5rem;
+}
+
+.header .select-language option {
+  color: #000;
 }
 
 .header .nav-phone {

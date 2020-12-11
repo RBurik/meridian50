@@ -50,7 +50,8 @@ a {
 }
 textarea,
 input,
-button {
+button,
+select {
   outline: none;
 }
 textarea {
@@ -152,10 +153,6 @@ h6 {
     font-size: 1.25rem;
     color: #fff;
     border-radius: 0.5rem;
-    // border-radius: 1.0625rem;
-    // animation-duration: 100s;
-    // animation-name: gradientColor;
-    // animation-iteration-count: infinite;
     width: calc(6.25rem + 0.5rem * 2);
     display: inline-flex;
     align-items: center;
@@ -179,6 +176,16 @@ h6 {
       animation-name: gradient;
       animation-iteration-count: infinite;
       width: auto;
+    }
+  }
+  .select-language {
+    margin-right: 0.4375rem;
+    background: none;
+    border: none;
+    color: #fff;
+    padding: 0.5rem;
+    option {
+      color: #000;
     }
   }
   .nav-phone {
