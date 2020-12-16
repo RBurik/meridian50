@@ -265,9 +265,35 @@ h6 {
 .main {
   position: relative;
   padding: 8.9375rem 0 3rem 0;
-  &-heading {
+  .heading {
+    display: flex;
+    align-items: center;
+    margin-bottom: 4rem;
+    img {
+      height: 30rem;
+      margin-right: 4rem;
+    }
+    &-title {
+      margin: 0 0 1.5rem 0;
+      font-size: 3rem;
+      font-weight: 800;
+      line-height: 103.5%;
+    }
+    &-paragraph {
+      font-size: 1.25rem;
+      line-height: 150%;
+    }
+  }
+  &-title {
     margin: 0 0 1.5rem 0;
-    font-size: 3rem;
+    font-size: 2rem;
+    font-weight: 800;
+    line-height: 103.5%;
+    max-width: 26.125rem;
+  }
+  .services-title {
+    margin: 0 0 1.5rem 0;
+    font-size: 2rem;
     font-weight: 800;
     line-height: 103.5%;
     max-width: 26.125rem;
@@ -309,13 +335,20 @@ h6 {
     .price {
       font-size: 4rem;
       font-family: $futura;
-      margin: 0;
+      margin: 0 0 2rem 0;
     }
     img {
       height: 25rem;
       position: absolute;
       right: 0;
       top: 0;
+    }
+    button {
+      padding: 1rem 4rem;
+    }
+    &-block {
+      transition: 0.3;
+      opacity: 1;
     }
   }
   #insurance-content,
@@ -415,6 +448,79 @@ h6 {
         box-shadow: none;
       }
     }
+  }
+}
+.section-title {
+  font-size: 2.125rem;
+  line-height: 103.5%;
+  font-weight: 900;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  margin: 0 0 3rem 0;
+}
+.section-subtitle {
+  font-family: $lato;
+  font-size: 1.75rem;
+  line-height: 103.5%;
+  font-weight: 900;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  // You should set your own margin on different sections
+}
+.section-questions {
+  padding: 4rem 0;
+  .questions {
+    margin-bottom: 2rem;
+  }
+  .question {
+    width: 100%;
+    background: #fff;
+    border: 0.0625rem solid $light-blue;
+    border-radius: 2rem;
+    &:not(:last-child) {
+      margin-bottom: 1rem;
+    }
+  }
+  .question-button {
+    position: relative;
+    width: 100%;
+    padding: 2rem 6rem 2rem 2rem;
+    background: none;
+    border: none;
+    display: flex;
+    align-items: center;
+    &:before,
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 2.5rem;
+      height: 0.25rem;
+      background-color: $light-blue;
+    }
+    &:before {
+      right: 2rem;
+      top: 50%;
+    }
+    &:after {
+      transition: 0.3s;
+      opacity: 1;
+      transform: rotate(90deg);
+      right: 2rem;
+      top: 50%;
+    }
+    &.openedQuestion:after {
+      transform: rotate(0);
+      opacity: 0;
+    }
+  }
+  .answer {
+    padding: 0 2rem 2rem 2rem;
+    margin: 0;
+    display: none;
+  }
+  .button-question {
+    padding: 1rem 4rem;
   }
 }
 .footer {

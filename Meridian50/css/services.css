@@ -517,9 +517,44 @@ h6 {
   padding: 8.9375rem 0 3rem 0;
 }
 
-.main-heading {
+.main .heading {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 4rem;
+}
+
+.main .heading img {
+  height: 30rem;
+  margin-right: 4rem;
+}
+
+.main .heading-title {
   margin: 0 0 1.5rem 0;
   font-size: 3rem;
+  font-weight: 800;
+  line-height: 103.5%;
+}
+
+.main .heading-paragraph {
+  font-size: 1.25rem;
+  line-height: 150%;
+}
+
+.main-title {
+  margin: 0 0 1.5rem 0;
+  font-size: 2rem;
+  font-weight: 800;
+  line-height: 103.5%;
+  max-width: 26.125rem;
+}
+
+.main .services-title {
+  margin: 0 0 1.5rem 0;
+  font-size: 2rem;
   font-weight: 800;
   line-height: 103.5%;
   max-width: 26.125rem;
@@ -578,7 +613,7 @@ h6 {
 .main .content .price {
   font-size: 4rem;
   font-family: "FuturaPT", "Lato", sans-serif;
-  margin: 0;
+  margin: 0 0 2rem 0;
 }
 
 .main .content img {
@@ -586,6 +621,17 @@ h6 {
   position: absolute;
   right: 0;
   top: 0;
+}
+
+.main .content button {
+  padding: 1rem 4rem;
+}
+
+.main .content-block {
+  -webkit-transition: 0.3;
+  -o-transition: 0.3;
+  transition: 0.3;
+  opacity: 1;
 }
 
 .main #insurance-content,
@@ -733,6 +779,101 @@ h6 {
 .popup-form .form-submit:hover {
   -webkit-box-shadow: none;
           box-shadow: none;
+}
+
+.section-title {
+  font-size: 2.125rem;
+  line-height: 103.5%;
+  font-weight: 900;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  margin: 0 0 3rem 0;
+}
+
+.section-subtitle {
+  font-family: "Lato", "FuturaPT", sans-serif;
+  font-size: 1.75rem;
+  line-height: 103.5%;
+  font-weight: 900;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.section-questions {
+  padding: 4rem 0;
+}
+
+.section-questions .questions {
+  margin-bottom: 2rem;
+}
+
+.section-questions .question {
+  width: 100%;
+  background: #fff;
+  border: 0.0625rem solid #8da1b5;
+  border-radius: 2rem;
+}
+
+.section-questions .question:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.section-questions .question-button {
+  position: relative;
+  width: 100%;
+  padding: 2rem 6rem 2rem 2rem;
+  background: none;
+  border: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.section-questions .question-button:before,
+.section-questions .question-button:after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 2.5rem;
+  height: 0.25rem;
+  background-color: #8da1b5;
+}
+
+.section-questions .question-button:before {
+  right: 2rem;
+  top: 50%;
+}
+
+.section-questions .question-button:after {
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+  opacity: 1;
+  -webkit-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+          transform: rotate(90deg);
+  right: 2rem;
+  top: 50%;
+}
+
+.section-questions .question-button.openedQuestion:after {
+  -webkit-transform: rotate(0);
+      -ms-transform: rotate(0);
+          transform: rotate(0);
+  opacity: 0;
+}
+
+.section-questions .answer {
+  padding: 0 2rem 2rem 2rem;
+  margin: 0;
+  display: none;
+}
+
+.section-questions .button-question {
+  padding: 1rem 4rem;
 }
 
 .footer {
