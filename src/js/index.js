@@ -1,7 +1,13 @@
 @@include('webpCheck.js');
 @@include('slick.js');
 @@include('jquery.maskedinput.js');
+@@include('wow.min.js');
+
 $(document).ready(function() {
+  // wow.js
+  new WOW().init();
+
+  // Slider
   $('.slider').slick({
     arrows: false, 
     dots: false, 
@@ -18,6 +24,9 @@ $(document).ready(function() {
     lazyLoad: 'progressive', 
     touchTreshold: 20, 
   });
+
+  // active .nav-item
+  $('.nav-item').eq(0).addClass('nav-item-active')
 
   // Masked Input
   $('.maskedInput').mask('9 (999) 999-99-99');

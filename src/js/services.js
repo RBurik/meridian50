@@ -1,5 +1,13 @@
 @@include('webpCheck.js');
+@@include('wow.min.js');
+
 $(document).ready(function() {
+  // wow.js
+  new WOW().init();
+
+  // active .nav-item
+  $('.nav-item').eq(1).addClass('nav-item-active')
+
   // Popup
   $('.toContact').on("click", function() {
     var $pp = $('.popup');

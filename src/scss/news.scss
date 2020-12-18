@@ -1,13 +1,3 @@
-@mixin font($font_name, $file_name, $weight, $style) {
-  @font-face {
-    font-family: $font_name;
-    font-display: swap;
-    src: url('../fonts/#{$file_name}.woff') format('woff'),
-      url('../fonts/#{$file_name}.woff2') format('woff2');
-    font-weight: #{$weight};
-    font-style: #{$style};
-  }
-}
 @import 'fonts';
 @import 'variables';
 @import 'mixins';
@@ -425,6 +415,105 @@ h6 {
 
   to {
     transform: translate(0, 0);
+  }
+}
+
+.section,
+.main,
+.footer {
+  position: relative;
+  z-index: 1;
+}
+@keyframes rotateUpLeft {
+  from {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: translate(24rem, 24rem);
+  }
+
+  to {
+    transform: translate(0, 0);
+  }
+}
+.glass-effect {
+  overflow: hidden;
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(245, 245, 251, 0.33);
+  #c-1 {
+    @include glassCircle(#fff, 33.9375rem, -1.5rem, 64rem);
+  }
+  #c-2 {
+    @include glassCircle(#fff3e1, 33.9375rem, 30.5rem, 46.625rem);
+  }
+  #c-3 {
+    @include glassCircle(#f0d1ff, 37.0625rem, 70.875rem, 7.4375rem);
+  }
+  #c-4 {
+    @include glassCircle(
+      rgba(209, 220, 255, 0.61),
+      33.9375rem,
+      22.0625rem,
+      -5.875rem
+    );
+  }
+  #c-5 {
+    @include glassCircle(#fff, 33.9375rem, 136.25rem, 62.625rem);
+  }
+  #c-6 {
+    @include glassCircle(
+      rgba(209, 220, 255, 0.93),
+      33.9375rem,
+      63.4375rem,
+      51rem
+    );
+  }
+  #c-7 {
+    @include glassCircle(
+      rgba(240, 209, 255, 0.6),
+      23.6875rem,
+      7.375rem,
+      2.4375rem
+    );
+  }
+  #c-8 {
+    @include glassCircle(#fff0da, 21.5625rem, 140.8125rem, 22.25rem);
+  }
+  #c-9 {
+    @include glassCircle(#fff0da, 21.5625rem, 119.1875rem, 45.4375rem);
+  }
+  #c-10 {
+    @include glassCircle(#fff, 24.3125rem, 165.5625rem, -3.4375rem);
+  }
+  #c-11 {
+    @include glassCircle(#acd0f3, 17.125rem, 230.625rem, 69.25rem);
+  }
+  #c-12 {
+    @include glassCircle(#ddacf3, 17.125rem, 245.6875rem, 78.1875rem);
+  }
+  #c-13 {
+    @include glassCircle(#ffefd6, 36rem, 239.1875rem, 15.75rem);
+  }
+  #c-14 {
+    @include glassCircle(#d9d8ff, 29.125rem, 207.5rem, 44.5625rem);
+  }
+  #c-15 {
+    @include glassCircle(#ffefd6, 23.3125rem, 158.5rem, 25rem);
+  }
+  #c-16 {
+    @include glassCircle(#d8d7ff, 31.4375rem, 192.1875rem, -3.4375rem);
+  }
+  #c-17 {
+    @include glassCircle(#fff, 31.4375rem, 213.125rem, 60.625rem);
+  }
+  #c-18 {
+    @include glassCircle(#c0cfff, 40.125rem, 272.8125rem, -5.3125rem);
   }
 }
 

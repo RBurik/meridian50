@@ -1,15 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Meridian-50 / News</title>
   <link rel="stylesheet" href="css/news.min.css" />
+
+  <!-- animation -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
 </head>
 <body>
   @@include('_header.html')
 
-  <main class="main">
+  <main class="main wow animate__animated animate__fadeIn">
     <h1 class="main-title">Новости</h1>
     <div class="slider">
       <div class="news-wrapper">
@@ -116,6 +122,29 @@
   </main>
 
   @@include('_footer.html')
+
+  <div class="glass-effect">
+    <div class="glass"></div>
+    <div class="glass-circle" id="c-1"></div>
+    <div class="glass-circle" id="c-2"></div>
+    <div class="glass-circle" id="c-3"></div>
+    <div class="glass-circle" id="c-4"></div>
+    <div class="glass-circle" id="c-5"></div>
+    <div class="glass-circle" id="c-6"></div>
+    <div class="glass-circle" id="c-7"></div>
+    <div class="glass-circle" id="c-8"></div>
+    <div class="glass-circle" id="c-9"></div>
+    <div class="glass-circle" id="c-10"></div>
+    <div class="glass-circle" id="c-11"></div>
+    <div class="glass-circle" id="c-12"></div>
+    <div class="glass-circle" id="c-13"></div>
+    <div class="glass-circle" id="c-14"></div>
+    <div class="glass-circle" id="c-15"></div>
+    <div class="glass-circle" id="c-16"></div>
+    <div class="glass-circle" id="c-17"></div>
+    <div class="glass-circle" id="c-18"></div>
+  </div>
+  
   @@include('_popup.html')
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>

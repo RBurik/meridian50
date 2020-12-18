@@ -1,0 +1,629 @@
+@mixin font($font_name, $file_name, $weight, $style) {
+  @font-face {
+    font-family: $font_name;
+    font-display: swap;
+    src: url('../fonts/#{$file_name}.woff') format('woff'),
+      url('../fonts/#{$file_name}.woff2') format('woff2');
+    font-weight: #{$weight};
+    font-style: #{$style};
+  }
+}
+@import 'fonts';
+@import 'variables';
+@import 'mixins';
+@import 'slick-slider';
+* {
+  box-sizing: border-box;
+}
+html {
+  font-size: 0.833333333333333333vw;
+  font-family: $lato;
+  overflow-x: hidden;
+}
+body {
+  position: relative;
+  padding: 0;
+  margin: 0;
+}
+ul {
+  margin: 0;
+  padding: 0;
+}
+li {
+  list-style: none;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span,
+b,
+i,
+a {
+  color: $black;
+}
+a {
+  text-decoration: none;
+}
+textarea,
+input,
+button,
+select {
+  outline: none;
+}
+textarea {
+  font-family: $lato;
+  border: none;
+  resize: none;
+}
+button {
+  cursor: pointer;
+  font-weight: bold;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $futura;
+}
+.container {
+  padding: 0 16rem;
+  width: 100%;
+}
+@keyframes gradient {
+  from {
+    background-color: $blue;
+  }
+  20% {
+    background-color: $purple;
+  }
+  40% {
+    background-color: $violet;
+  }
+  60% {
+    background-color: $pink;
+  }
+  80% {
+    background-color: $turquoise;
+  }
+  to {
+    background-color: $blue;
+  }
+}
+@keyframes gradientColor {
+  from {
+    color: $blue;
+  }
+  20% {
+    color: $purple;
+  }
+  40% {
+    color: $violet;
+  }
+  60% {
+    color: $pink;
+  }
+  80% {
+    color: $turquoise;
+  }
+  to {
+    color: $blue;
+  }
+}
+.fixed-page {
+  overflow: hidden;
+}
+.header {
+  transition: 0.1s;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+  background-color: $blue;
+  animation-duration: 100s;
+  animation-name: gradient;
+  animation-iteration-count: infinite;
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 16rem;
+    height: 4.9375rem;
+  }
+  .logo-header {
+    font-family: $futura;
+    color: #fff;
+    font-size: 1.125rem;
+    font-weight: bold;
+  }
+  .nav {
+    display: flex;
+    align-items: center;
+  }
+  .nav-item {
+    padding: 0.3125rem 0.5rem;
+    position: relative;
+    transition: 0.15s;
+    font-size: 1.25rem;
+    color: #fff;
+    border-radius: 0.5rem;
+    width: calc(6.25rem + 0.5rem * 2);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    &:hover {
+      background-color: rgba($color: #fff, $alpha: 0.3);
+    }
+    &:not(:last-child) {
+      margin-right: 0.4375rem;
+    }
+    &.nav-item-active {
+      font-weight: bold;
+      background-color: #fff;
+      animation-duration: 100s;
+      animation-name: gradientColor;
+      animation-iteration-count: infinite;
+    }
+    &.nav-contact {
+      color: #fff;
+      animation-duration: 100s;
+      animation-name: gradient;
+      animation-iteration-count: infinite;
+      width: auto;
+    }
+  }
+  .select-language {
+    font-size: 1.25rem;
+    margin-right: 0.4375rem;
+    background: none;
+    border: none;
+    color: #fff;
+    padding: 0.5rem;
+    option {
+      color: #000;
+    }
+  }
+  .nav-phone {
+    border: 0.0625rem solid #fff;
+    width: auto;
+    &:hover {
+      background-color: rgba($color: #fff, $alpha: 0.1);
+    }
+    img {
+      width: 1.75rem;
+    }
+  }
+}
+.main {
+  position: relative;
+  padding: 12.5rem 0 5rem 0;
+  .main-title {
+    text-align: center;
+    margin: 0 0 1.5rem 0;
+    font-size: 3rem;
+    font-weight: 800;
+    line-height: 103.5%;
+  }
+  .main-subtitle {
+    margin: 0 0 3rem 0;
+    font-size: 1.5rem;
+    text-align: center;
+    line-height: 142%;
+  }
+  .cards {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .card {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    width: calc(100% / 3 - 4rem / 3);
+    img {
+      height: 6rem;
+      margin-bottom: 2rem;
+    }
+    li {
+      font-size: 1.25rem;
+      font-weight: bold;
+      &:not(:last-child) {
+        margin-bottom: 0.5rem;
+      }
+    }
+  }
+}
+.section-contacts {
+  padding: 4rem 0;
+  position: relative;
+  .form {
+    display: flex;
+    flex-direction: column;
+    input,
+    textarea,
+    button {
+      border: none;
+      background-color: #fff;
+    }
+    input,
+    textarea {
+      border-radius: 1rem;
+      border: none;
+      background-color: #fff;
+      width: 30rem;
+      padding: 1rem 1.5rem;
+      margin-bottom: 1rem;
+    }
+    textarea {
+      height: 15rem;
+    }
+    .button-blue {
+      &:hover {
+        box-shadow: none;
+      }
+      width: 30rem;
+      padding: 1rem 2rem;
+      animation-duration: 100s;
+      animation-name: gradient;
+      animation-iteration-count: infinite;
+    }
+  }
+  .section-img {
+    height: 36rem;
+    position: absolute;
+    top: 4rem;
+    right: 13rem;
+  }
+}
+.button-blur {
+  transition: 0.15s;
+  border: none;
+  padding: 1rem 5.125rem;
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: bold;
+  background: rgba(245, 245, 251, 0.33);
+  backdrop-filter: blur(1.25rem);
+  border-radius: 0.75rem;
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+.button-blue {
+  transition: 0.3s;
+  font-family: $lato;
+  font-size: 1.5rem;
+  color: #fff;
+  background-color: $blue;
+  border: none;
+  border-radius: 0.75rem;
+  &:hover {
+    box-shadow: 0px 0px 1.375rem rgba($color: $blue, $alpha: 0.59);
+  }
+}
+.button-purple {
+  transition: 0.3s;
+  font-family: $lato;
+  font-size: 1.5rem;
+  color: #fff;
+  background-color: $purple;
+  border: none;
+  border-radius: 0.75rem;
+  &:hover {
+    box-shadow: 0px 0px 1.375rem rgba($color: $purple, $alpha: 0.59);
+  }
+}
+.button-violet {
+  transition: 0.3s;
+  font-family: $lato;
+  font-size: 1.5rem;
+  color: #fff;
+  background-color: $violet;
+  border: none;
+  border-radius: 0.75rem;
+  &:hover {
+    box-shadow: 0px 0px 1.375rem rgba($color: $violet, $alpha: 0.59);
+  }
+}
+.button-pink {
+  transition: 0.3s;
+  font-family: $lato;
+  font-size: 1.5rem;
+  color: #fff;
+  background-color: $pink;
+  border: none;
+  border-radius: 0.75rem;
+  &:hover {
+    box-shadow: 0px 0px 1.375rem rgba($color: $pink, $alpha: 0.59);
+  }
+}
+
+// Popup
+.popup {
+  position: fixed;
+  z-index: 1000;
+  right: -100%;
+  top: 0;
+  transition: 0.3s;
+  box-shadow: 1.25rem 0 4rem 0.25rem #666;
+  width: calc(100% / 3);
+  background-color: #fff;
+  height: 100%;
+  &.popup-active {
+    right: 0;
+  }
+  &-heading {
+    padding: 2rem 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 0.0625rem solid $light-blue;
+    .title {
+      margin: 0;
+      font-size: 2.125rem;
+    }
+    .popup-escape {
+      transition: 0.15s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.75rem 0.5rem;
+      background-color: inherit;
+      border: none;
+      border-radius: 0.5rem;
+      img {
+        width: 1.5rem;
+      }
+      &:hover {
+        background-color: rgba($color: #000, $alpha: 0.1);
+      }
+    }
+  }
+  &-info {
+    padding: 4rem;
+  }
+  &-content {
+    font-size: 1.5rem;
+    margin: 0 0 2rem 0;
+  }
+  .phone {
+    transition: 0.15s;
+    display: block;
+    width: fit-content;
+    margin-bottom: 2rem;
+    padding: 1rem 2rem;
+    font-size: 1.25rem;
+    background-color: $blue;
+    color: #fff;
+    border-radius: 0.5rem;
+    animation-duration: 100s;
+    animation-name: gradient;
+    animation-iteration-count: infinite;
+  }
+  &-form {
+    display: flex;
+    flex-direction: column;
+    input {
+      margin-bottom: 1rem;
+    }
+    input,
+    textarea {
+      background-color: #f0f0f0;
+      font-size: 1.25rem;
+      padding: 1rem 2rem;
+      border-radius: 1rem;
+      border: none;
+    }
+    textarea {
+      height: 16rem;
+      margin-bottom: 1rem;
+    }
+    .form-submit {
+      padding: 1rem 2rem;
+      animation-duration: 100s;
+      animation-name: gradient;
+      animation-iteration-count: infinite;
+      &:hover {
+        box-shadow: none;
+      }
+    }
+  }
+}
+.section-title {
+  font-size: 2.125rem;
+  line-height: 103.5%;
+  font-weight: 900;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  margin: 0 0 3rem 0;
+}
+.section-subtitle {
+  font-family: $lato;
+  font-size: 1.75rem;
+  line-height: 103.5%;
+  font-weight: 900;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  // You should set your own margin on different sections
+}
+.footer {
+  position: relative;
+  padding: 10.75rem 0 0 0;
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 6.75rem;
+    background-color: $footer;
+    width: 100%;
+    height: 4rem;
+    border-top-left-radius: 100%;
+    border-top-right-radius: 100%;
+  }
+  .container {
+    position: relative;
+    padding-top: 2rem;
+    padding-bottom: 4.375rem;
+    background-color: $footer;
+    display: flex;
+    flex-flow: column wrap;
+    max-height: 15.25rem;
+    &:after {
+      content: '© meridian-50 2020';
+      font-size: 0.75rem;
+      color: $black;
+      position: absolute;
+      left: calc(50% - 3.375rem);
+      bottom: 1rem;
+    }
+  }
+  .logo-footer {
+    font-family: $futura;
+    font-size: 1.125rem;
+    color: $black;
+    margin-right: 4rem;
+    margin-bottom: 1rem;
+  }
+  .social-links {
+    margin-right: 4rem;
+    a:not(:last-child) {
+      margin-right: 0.5rem;
+    }
+    img {
+      height: 1.5rem;
+    }
+  }
+  .nav-footer {
+    display: flex;
+    flex-direction: column;
+    a {
+      font-size: 1.125rem;
+      color: $black;
+      &:not(:last-child) {
+        margin-bottom: 0.5rem;
+      }
+    }
+  }
+  .nav-footer,
+  .e-address {
+    margin-right: 8.4375rem;
+  }
+  .list-title {
+    font-size: 1.6875rem;
+    font-weight: bold;
+    font-family: $futura;
+    margin-bottom: 0.5rem;
+  }
+  .e-address,
+  .address {
+    color: $black;
+    font-size: 1rem;
+    li:not(:last-child) {
+      margin-bottom: 1rem;
+    }
+  }
+}
+.section,
+.main,
+.footer {
+  position: relative;
+  z-index: 1;
+}
+@keyframes rotateUpLeft {
+  from {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: translate(24rem, 24rem);
+  }
+
+  to {
+    transform: translate(0, 0);
+  }
+}
+.glass-effect {
+  overflow: hidden;
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(245, 245, 251, 0.33);
+  #c-1 {
+    @include glassCircle(#fff, 33.9375rem, -1.5rem, 64rem);
+  }
+  #c-2 {
+    @include glassCircle(#fff3e1, 33.9375rem, 30.5rem, 46.625rem);
+  }
+  #c-3 {
+    @include glassCircle(#f0d1ff, 37.0625rem, 70.875rem, 7.4375rem);
+  }
+  #c-4 {
+    @include glassCircle(
+      rgba(209, 220, 255, 0.61),
+      33.9375rem,
+      22.0625rem,
+      -5.875rem
+    );
+  }
+  #c-5 {
+    @include glassCircle(#fff, 33.9375rem, 136.25rem, 62.625rem);
+  }
+  #c-6 {
+    @include glassCircle(
+      rgba(209, 220, 255, 0.93),
+      33.9375rem,
+      63.4375rem,
+      51rem
+    );
+  }
+  #c-7 {
+    @include glassCircle(
+      rgba(240, 209, 255, 0.6),
+      23.6875rem,
+      7.375rem,
+      2.4375rem
+    );
+  }
+  #c-8 {
+    @include glassCircle(#fff0da, 21.5625rem, 140.8125rem, 22.25rem);
+  }
+  #c-9 {
+    @include glassCircle(#fff0da, 21.5625rem, 119.1875rem, 45.4375rem);
+  }
+  #c-10 {
+    @include glassCircle(#fff, 24.3125rem, 165.5625rem, -3.4375rem);
+  }
+  #c-11 {
+    @include glassCircle(#acd0f3, 17.125rem, 230.625rem, 69.25rem);
+  }
+  #c-12 {
+    @include glassCircle(#ddacf3, 17.125rem, 245.6875rem, 78.1875rem);
+  }
+  #c-13 {
+    @include glassCircle(#ffefd6, 36rem, 239.1875rem, 15.75rem);
+  }
+  #c-14 {
+    @include glassCircle(#d9d8ff, 29.125rem, 207.5rem, 44.5625rem);
+  }
+  #c-15 {
+    @include glassCircle(#ffefd6, 23.3125rem, 158.5rem, 25rem);
+  }
+  #c-16 {
+    @include glassCircle(#d8d7ff, 31.4375rem, 192.1875rem, -3.4375rem);
+  }
+  #c-17 {
+    @include glassCircle(#fff, 31.4375rem, 213.125rem, 60.625rem);
+  }
+  #c-18 {
+    @include glassCircle(#c0cfff, 40.125rem, 272.8125rem, -5.3125rem);
+  }
+}

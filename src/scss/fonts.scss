@@ -1,4 +1,5 @@
-@include font('FuturaPT', 'FuturaPT-Bold', '600', 'bold');
-@include font('FuturaPT', 'FuturaPT-ExtraBold', '800', 'black');
-@include font('Lato', 'Lato-Regular', '400', 'normal');
-@include font('Lato', 'Lato-Bold', '600', 'bold');
+@import 'mixins';
+@include font('FuturaPT-Bold', 'FuturaPT-Bold', '400', 'normal');
+@include font('FuturaPT-ExtraBold', 'FuturaPT-ExtraBold', '400', 'normal');
+@include font('Lato-Regular', 'Lato-Regular', '400', 'normal');
+@include font('Lato-Bold', 'Lato-Bold', '400', 'normal');

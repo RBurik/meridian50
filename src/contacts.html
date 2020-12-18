@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meridian-50 / Contacts</title>
+  <link rel="stylesheet" href="css/contacts.min.css" />
+
+  <!-- animation -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+</head>
+<body>
+  @@include('_header.html')
+
+  <main class="main wow animate__animated animate__fadeIn">
+    <div class="container">
+      <h1 class="main-title">Контактная информация</h1>
+      <p class="main-subtitle">Мы стремимся ответить всем в течении <b>24 часов</b>! Будем рады ответить на ваши вопросы</p>
+      <div class="cards">
+        <div class="card">
+          <img src="img/sprite.svg#time" alt="Timetable">
+          <ul>
+            <li>10:00 - 18:00</li>
+            <li>Рабочие дни: пн - сб</li>
+          </ul>
+        </div>
+        <div class="card">
+          <img src="img/sprite.svg#pin" alt="pin">
+          <ul>
+            <li>Страна, город, ул. чешская, д.107, кв. 7</li>
+          </ul>
+        </div>
+        <div class="card">
+          <img src="img/sprite.svg#mail" alt="mail">
+          <ul>
+            <li>m.grydchyn@meridian50.cz</li>
+            <li>+420 608 199 299</li>
+          </ul>
+        </div>
+      </div>
+      <!-- /.cards -->
+    </div>
+  </main>
+
+  <section class="section section-contacts wow animate__animated animate__fadeIn">
+    <div class="container">
+      <h2 class="section-title">Напиши нам</h2>
+      <form class="form">
+        <input type="text" placeholder="Имя">
+        <input type="text" placeholder="Email">
+        <textarea placeholder="Сообщение"></textarea>
+        <button class="button-blue">Отправить</button>
+      </form>
+      <img src="img/sprite.svg#confidence" alt="contacts" class="section-img">
+    </div>
+  </section>
+  <!-- /.section section-contacts -->
+  
+  @@include('_footer.html')
+
+  <div class="glass-effect">
+    <div class="glass"></div>
+    <div class="glass-circle" id="c-1"></div>
+    <div class="glass-circle" id="c-2"></div>
+    <div class="glass-circle" id="c-3"></div>
+    <div class="glass-circle" id="c-4"></div>
+    <div class="glass-circle" id="c-5"></div>
+    <div class="glass-circle" id="c-6"></div>
+    <div class="glass-circle" id="c-7"></div>
+    <div class="glass-circle" id="c-8"></div>
+    <div class="glass-circle" id="c-9"></div>
+    <div class="glass-circle" id="c-10"></div>
+    <div class="glass-circle" id="c-11"></div>
+    <div class="glass-circle" id="c-12"></div>
+    <div class="glass-circle" id="c-13"></div>
+    <div class="glass-circle" id="c-14"></div>
+    <div class="glass-circle" id="c-15"></div>
+    <div class="glass-circle" id="c-16"></div>
+    <div class="glass-circle" id="c-17"></div>
+    <div class="glass-circle" id="c-18"></div>
+  </div>
+
+  @@include('_popup.html')
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="js/contacts.min.js"></script>
+</body>
+</html>

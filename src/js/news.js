@@ -1,6 +1,15 @@
 @@include('webpCheck.js');
 @@include('slick.js');
+@@include('wow.min.js');
+
 $(document).ready(function() {
+  // wow.js
+  new WOW().init();
+
+  // active .nav-item
+  $('.nav-item').eq(2).addClass('nav-item-active')
+
+  // Slider
   $('.slider').slick({
     arrows: false, 
     dots: true, 
