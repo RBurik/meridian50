@@ -1,0 +1,20 @@
+.dd-select {
+  background: none !important;
+  border: 0.0625rem solid #fff !important;
+  padding: 0.25rem 1.5rem 0.25rem 0.25rem !important;
+  border-radius: 0.5rem !important;
+  img {
+    margin: 0;
+    height: 2rem;
+  }
+}
+.dd-selected {
+  padding: 0 !important;
+}
+.dd-options {
+  border: none;
+}
+.dd-option-image,
+.dd-selected-image {
+  margin: 0 !important;
+}
