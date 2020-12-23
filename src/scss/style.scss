@@ -128,8 +128,8 @@ h6 {
     height: 4.9375rem;
   }
   .logo-header {
-    height: 126%;
-    width: 11rem;
+    height: 212%;
+    width: 19rem;
     background-image: url(../img/sprite.svg#logo);
     background-repeat: no-repeat;
   }
@@ -176,6 +176,7 @@ h6 {
   .nav-phone {
     border: 0.0625rem solid #fff;
     width: auto;
+    font-family: $nunito;
     &:hover {
       background-color: rgba($color: #fff, $alpha: 0.1);
     }
@@ -348,11 +349,13 @@ ul.list-untitled {
     }
   }
   .logo-footer {
-    font-family: $nunito;
-    font-size: 1.125rem;
-    color: $black;
+    height: 10rem;
+    width: 19rem;
+    background-image: url(../img/sprite.svg#logo);
+    background-repeat: no-repeat;
     margin-right: 4rem;
     margin-bottom: 1rem;
+    display: block;
   }
   .social-links {
     margin-right: 4rem;
