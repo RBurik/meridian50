@@ -10,6 +10,13 @@
 }
 .dd-selected {
   padding: 0 !important;
+  font-size: 0;
+  img {
+    display: none;
+  }
+  svg {
+    width: 2rem;
+  }
 }
 .dd-options {
   border: none;
@@ -17,4 +24,10 @@
 .dd-option-image,
 .dd-selected-image {
   margin: 0 !important;
+}
+.dd-option {
+  font-size: 0;
+  img {
+    display: none;
+  }
 }

@@ -12,6 +12,15 @@
 
 .dd-selected {
   padding: 0 !important;
+  font-size: 0;
+}
+
+.dd-selected img {
+  display: none;
+}
+
+.dd-selected svg {
+  width: 2rem;
 }
 
 .dd-options {
@@ -21,4 +30,12 @@
 .dd-option-image,
 .dd-selected-image {
   margin: 0 !important;
+}
+
+.dd-option {
+  font-size: 0;
+}
+
+.dd-option img {
+  display: none;
 }
