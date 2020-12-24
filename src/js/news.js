@@ -3,38 +3,38 @@
 @@include('select.min.js');
 @@include('wow.min.js');
 
+// Dropdown select
+
+var language = [
+  {
+      text: "",
+      value: 1,
+      selected: true,
+      description: "",
+      imageSrc: '../img/sprite.svg#russia'
+  },
+  {
+      text: "",
+      value: 2,
+      selected: false,
+      description: "",
+      imageSrc: '../img/sprite.svg#united-kingdom'
+  },
+];
+
+$('.select-language').ddslick({
+  data: language,
+  width: '5rem',
+  selectText: "Select your preferred social network",
+  imagePosition:"right",
+  onSelected: function(selectedData){
+      //callback function: do something with selectedData;
+  }   
+});
+
 $(document).ready(function() {
   // wow.js
   new WOW().init();
-
-  // Dropdown select
-
-  var language = [
-    {
-        text: "",
-        value: 1,
-        selected: true,
-        description: "",
-        imageSrc: '../img/sprite.svg#russia'
-    },
-    {
-        text: "",
-        value: 2,
-        selected: false,
-        description: "",
-        imageSrc: '../img/sprite.svg#united-kingdom'
-    },
-  ];
-
-  $('.select-language').ddslick({
-    data: language,
-    width: '5rem',
-    selectText: "Select your preferred social network",
-    imagePosition:"right",
-    onSelected: function(selectedData){
-        //callback function: do something with selectedData;
-    }   
-});
 
 
   // active .nav-item
