@@ -39,3 +39,7 @@
 .dd-option img {
   display: none;
 }
+
+.dd-option svg {
+  width: 3rem;
+}

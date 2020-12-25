@@ -9,10 +9,11 @@
     img {
       height: 30rem;
       margin-right: 4rem;
+      margin-left: -16rem;
     }
     &-title {
       margin: 0 0 1.5rem 0;
-      font-size: 3rem;
+      font-size: 2rem;
       font-weight: 800;
       line-height: 103.5%;
     }
@@ -169,7 +170,7 @@
   .questions-img {
     position: absolute;
     bottom: -13rem;
-    transform: rotate(-130deg);
+    transform: rotate(-166deg);
     right: 29rem;
     height: 37rem;
   }
